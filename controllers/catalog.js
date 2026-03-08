@@ -1,6 +1,8 @@
 'use strict'
 
-const playlist = [
+import logger from "../utils/logger.js"
+
+const cataloges = [
   {
     id: 1,
     title: "Piano Sonata No. 3",
@@ -20,7 +22,9 @@ const playlist = [
 
 const catalog = {
   createView(request, response) {
-    response.json(playlist);   
+    logger.info("Catalog page loading!")
+    logger.debug("Loading the catalog", cataloges)
+    response.json(cataloges);   
   }
 }
 
