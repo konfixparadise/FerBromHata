@@ -9,6 +9,10 @@ const app = express()
 const port = 3000;
 
 app.use(express.static("public"))
+app.use((request, response, next) => {
+    response.locals.currentYear = new Date().getFullYear()
+    next()
+})
 
 const handlebars = create({extname: '.hbs'})
 app.engine('.hbs', handlebars.engine)

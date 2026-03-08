@@ -1,9 +1,56 @@
 {{> menu}}
 
 <section class="ui left aligned middle aligned segment">
-    <h2>Welcome to the FerBromHata App!</h2>
-    <p>
+  <div id="textPhoto">
+    <h2>{{title}}</h2>
+    <img src="/textPhoto_FerBromHata.png">
+  </div>
+  <p>
         This app will allow users to order and maintain a collection of FerBromHata
-    </p>
+  </p>
+  <div id="textPhoto">
+    <img src="/textPhoto_QA.png">
+    <div>
+      <h2>Text</h2>
+      <p>Text</p>
     </div>
+  </div>
+  <div id="adventages">
+    <div id="iconText">
+      <img src="">
+      <h3>Name</h3>
+      <p>Text</p>
+    </div>
+    <div id="iconText">
+      <img src="">
+      <h3>Name</h3>
+      <p>Text</p>
+    </div>
+    <div id="iconText">
+      <img src="">
+      <h3>Name</h3>
+      <p>Text</p>
+    </div>
+  </div>
+  <div id="textPhoto">
+    <div>
+      <h2>Text</h2>
+      <p>Text</p>
+      <button><a href="/catalog">Search now!</a></button>
+    </div>
+    <img src="/textPhoto_search.png">
+  </div>
+  <div id="contact">
+    <div id="signUp">
+      <img src="">
+      <h2>Sign up</h2>
+      <textarea></textarea>
+      <button>Subscribe</button>
+    </div>
+    <a href="{{info.company.phone}}">{{info.company.phone}}</a><br>
+    <a href="{{info.company.email}}">{{info.company.email}}</a><br>
+    <a href="{{info.company.address}}">{{info.company.address}}</a>
+  </div>
 </section>
+
+{{> footer}}
