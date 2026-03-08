@@ -1,0 +1,17 @@
+{
+  "info": {
+    "appTitle": "Cataloge Maker",
+    "version": 0.1,
+    "creators": [
+      {
+        "name": "Rosanne Birney",
+        "role": "Web Developer"
+      },
+      {
+        "name": "A.N. Other",
+        "role": "Web Developer"
+      }
+    ],
+    "location": "Waterford"
+  } 
+}
