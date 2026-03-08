@@ -8,7 +8,7 @@ const start = {
         logger.info("Start page loading!")
         
         const viewData = {
-            title: "Welcome to the FerBromHata app!",
+            title: "FerBromHata",
             info: appStore.getAppInfo()
         }
 
