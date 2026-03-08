@@ -10,7 +10,11 @@ html {
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 50px;
-  background-color: lightgrey;
+  background-image: url("./bromus-background.png");
+  background-repeat: repeat-x;
+  background-attachment:fixed;
+  background-position: left top;
+  background-size: cover;
 }
 
 .ui.menu .header {
