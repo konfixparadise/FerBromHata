@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 50px;
+  background-color: lightgrey;
+}
+
+.ui.menu .header {
+  height: 3em;  
+  padding: 0; 
+}
+
+.ui.menu .header img {
+  height: 100%; 
+  width: auto; 
+}
+
+
