@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 *, *:before, *:after {
@@ -35,6 +35,9 @@ body {
 .ui.segment p {
   text-align: center;
 }
+.ui.segment p {
+  color: #525655;
+}
 
 #textPhoto {
   display: flex;
@@ -51,7 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8%;
+  padding: 0 8%;
 }
 
 #titleImg{
@@ -67,6 +70,60 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+#contentImg {
+  flex:1;
+  width: 50%;
+  height: 100%;
+  background-color: #EBFFF5;
+  padding: 1% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contentImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;  
+}
+
+#blackText {
+  background-color: #EBFFF5;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3%;
+}
+
+#blackText h2, 
+#blackText p {
+  text-align: left;
+}
+
+#blackText button {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #00DC75;
+  border: none;
+  border-radius: 150px;
+  padding: 15px 35px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#blackText button:hover {
+  color: white;
+  background-color: #004C40;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (min-width: 1500px){
@@ -85,7 +142,6 @@ body {
 
   #titleImg img {
     height: auto;
-
     transform: scale(1.1);
     transform-origin: center left;
     transition: transform 1s ease;
