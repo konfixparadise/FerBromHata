@@ -10,11 +10,7 @@ html {
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 50px;
-  background-image: url("./bromus-background.png");
-  background-repeat: repeat-x;
-  background-attachment:fixed;
-  background-position: left top;
-  background-size: cover;
+  background: url("./bromus-background.png") fixed no-repeat left top / cover;
 }
 @media only screen{
   .ui.container {
@@ -34,6 +30,7 @@ body {
 .ui.segment h2,
 .ui.segment p {
   text-align: center;
+  padding: 0 20%;
 }
 .ui.segment p {
   color: #525655;
@@ -103,11 +100,14 @@ body {
 }
 
 #blackText h2, 
-#blackText p {
+#blackText p,
+#whiteText h2,
+#whiteText p {
   text-align: left;
+  padding: 0;
 }
 
-#blackText button {
+.btns {
   color: black;
   text-decoration: none;
   font-weight: bold;
@@ -119,14 +119,33 @@ body {
   margin-top: 10px;
 }
 
-#blackText button:hover {
+.btns:hover {
   color: white;
   background-color: #004C40;
   transform: translateY(-3px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-@media only screen and (min-width: 1500px){
+#adventages {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 5%;
+}
+
+#iconText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#iconText img {
+  width: 40px;
+  height: auto;
+}
+
+@media only screen and (min-width: 1920px){
   #textPhoto {
     height: 500px;
   }
@@ -144,7 +163,6 @@ body {
     height: auto;
     transform: scale(1.1);
     transform-origin: center left;
-    transition: transform 1s ease;
   }
 }
 
@@ -158,4 +176,56 @@ body {
   width: auto; 
 }
 
+.custom_footer {
+  background-color: #001D17 !important;
+  padding-bottom: 1% !important;
+}
 
+#signUp {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.signupIcon {
+  width: 40px;
+  margin: 15px 0;
+}
+
+#signUp h2 {
+  color: white;
+  margin: 0 0 15px 0;
+}
+
+.signupForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.signupForm input {
+  width: 30%;
+  border-radius: 150px;
+  padding: 20px;
+  border: none;
+  outline: none;
+}
+
+.signupForm .btns {
+  margin-top: 0;
+  padding: 20px 50px;
+}
+
+.contact_item strong{
+  color: #00DC75;
+  display: block;
+}
+
+.contact_item a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.contact_item a:hover {
+  text-decoration: underline;
+}
