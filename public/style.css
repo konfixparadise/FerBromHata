@@ -140,9 +140,9 @@ body {
   text-align: center;
 }
 
-#iconText img {
-  width: 40px;
-  height: auto;
+.custom_icon {
+  font-size: 3em !important;
+  color: #00DC75;
 }
 
 @media only screen and (min-width: 1920px){
@@ -186,8 +186,7 @@ body {
   padding-bottom: 20px;
 }
 
-.signupIcon {
-  width: 40px;
+#signUp .custom_icon {
   margin: 15px 0;
 }
 
