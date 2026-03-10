@@ -14,19 +14,16 @@ body {
   background: url("./bromus-background.png") fixed no-repeat left top / cover;
 }
 
-@media only screen{
-  .ui.container {
-    width: 90% !important;
-    max-width: none !important;
-  }
+.ui.container {
+  width: 90% !important;
+  max-width: none !important;
 }
 
 .ui.segment {
   padding: 0;
   margin: 0;
   border: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
 
@@ -428,7 +425,6 @@ body {
   }
 
   .custom_footer {
-    border-radius: 10px !important;
-    margin-bottom: 2.5% !important;
+    border-radius: 0 0 10px 10px !important;
   }
 }
