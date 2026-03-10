@@ -3,11 +3,14 @@
         <a id="logo" href="/"> 
             <img src="/bromus-logo.png"> 
         </a>
+        <button class="mobile_hamburger_btn" onclick="toggleMobile()">
+            <i class="bars icon"></i>
+        </button>
     </header>
-    <div class="right menu">
+    <div class="right menu" id="nav_links">
         <a id="home" class="item" href="/"> Home </a>
-        <div class="ui dropdown item" id="catalog_box" onclick="window.location.href='/catalog';">
-            <a id="catalog" class="item" href="/catalog"> Catalog </a> 
+        <div class="ui dropdown item" id="catalog_box">
+            <a id="catalog"  href="/catalog"> Catalog </a> 
             <i class="dropdown icon"></i>
             <div class="menu">
                 <a class="item" href="/catalog"> Farm Solutions </a>
@@ -21,6 +24,11 @@
 </nav>
 
 <script>
+    function toggleMobile() {
+        var nav = document.getElementById("nav_links")
+        nav.classList.toggle("mobile_open")
+    }
+
     window.onload = function() {
         if (typeof $ !== 'undefined' && $.fn.dropdown) {
             $('.ui.dropdown').dropdown({
@@ -28,6 +36,25 @@
                 action: 'hide' 
             })
         }
+
+        const catalogBox = document.getElementById('catalog_box')
+        if (catalogBox) {
+            catalogBox.addEventListener('click', function(e) {
+                if (window.innerWidth > 768) {
+                    window.location.href = '/catalog'
+                }
+            })
+        }
+        const catalogLink = document.getElementById('catalog')
+        if (catalogLink) {
+            catalogLink.addEventListener('click', function(e) {
+                if (window.innerWidth < 768) {
+                    e.preventDefault()
+                }
+            })
+        }
+
+
         var rawId = "{{id}}"
         var pageId = (rawId === "/" || rawId === "") ? "home" : rawId.replace(/\//g, "") 
         if (pageId === "catalog") { pageId = "catalog_box"; }
@@ -37,5 +64,5 @@
                 element.classList.add('active')
             }
         }
-    };
+    }
 </script>
