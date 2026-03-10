@@ -121,11 +121,6 @@ body {
   line-height: 2 !important;
 }
 
-#contact.item:hover {
-  border-color: transparent;
-  background-color: #083027;
-}
-
 .custom_footer {
   background-color: #001D17 !important;
   padding-bottom: 1% !important;
@@ -262,11 +257,34 @@ body {
   margin-top: 10px;
 }
 
-.btns:hover {
+@media (hover: hover) {
+  .btns:hover {
   color: white;
   background-color: #004C40;
   transform: translateY(-3px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  #contact.item:hover {
+  border-color: transparent;
+  background-color: #083027;
+  }
+
+  .ui.menu .item:hover,
+  .ui.menu .item > a:hover{
+  color: #00DC75 !important;
+  }
+}
+
+.btns:active,
+#contact.item:active {
+  background-color: #083027;
+  color: white;
+  transform: scale(0.95);
+}
+
+.ui.menu .item:not(.active) {
+  color: white !important;
 }
 
 #adventages {
