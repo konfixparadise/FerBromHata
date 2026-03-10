@@ -280,8 +280,10 @@ body {
   transform: scale(0.95);
 }
 
-.ui.menu .item:not(.active) {
+.ui.menu .item:not(.active),
+.ui.menu .item:not(.active) #catalog{
   color: white !important;
+  border: none;
 }
 
 #adventages {
@@ -397,6 +399,9 @@ body {
     height: auto !important;
     max-height: 350px !important;
     width: 100% !important;
+  }
+  #titleImg img{
+    border-radius: 10px;
   }
 
   #adventages {
