@@ -1,55 +1,48 @@
 {{> menu}}
 
-<section class="ui center aligned middle aligned segment">
-    <h2>Welcome to the FerBromHata App!</h2>
-    <p>
-        This app will allow users to order and maintain a collection of FerBromHata
-    </p>
-    <div class="ui five statistics" style="margin-top: 1em">
-        <div class="statistic">
-            <div class="value">
-                <i class="music icon"></i>
-            </div>
-            <div class="label">
-                App Title: <br>
-                {{info.appTitle}}
-            </div>
-        </div>
-            <div class="statistic">
-      <div class="value">
-        <i class="code branch icon"></i> 
-      </div>
-      <div class="label">
-        App Version: <br>
-        Version {{info.version}}
-      </div>
-    </div>    
-    <div class="statistic">
-      <div class="value">
-        <i class="map pin icon"></i> 
-      </div>
-      <div class="label">
-        Made in: <br>
-        {{info.location}}
-      </div>
-    </div>    
-    <div class="statistic">
-      <div class="value">
-        <i class="user icon"></i> 
-      </div>
-      <div class="label">
-        Created by: <br>
-        {{info.creators.0.name}}
-      </div>
-    </div> 
-    <div class="statistic">
-      <div class="value">
-        <i class="user plus icon"></i> 
-      </div>
-      <div class="label">
-        With help from: <br>
-        {{info.creators.1.name}}
-      </div>
-    </div> 
+<section class="ui left aligned middle aligned segment">
+  <div id="textPhoto">
+    <div id="whiteText"><h2>{{title}}</h2></div>
+    <div id="titleImg"><img src="/photos/textPhoto_FerBromHata.png"></div>
+  </div>
+  <h2>FerBromHata: Pioneering modern farm infrastructure through green innovation</h2>
+  <p>
+    FerBromHata combines decades of structural expertise with cutting-edge renewable energy and automation—helping global farmers modernize their operations while prioritizing sustainability, animal welfare, and workforce stability.
+  </p>
+  <div id="textPhoto">
+    <div id="contentImg"><img src="/photos/textPhoto_QA.png"></div>
+    <div id="blackText">
+      <h2>How does FerBromHata transform traditional farms into future-ready habitats?</h2>
+      <p>By integrating "Green Solutions" like wind and solar power with advanced structural upgrades, FerBromHata allows farmsteads to modernize without the need for full reconstruction. Our focus remains on enhancing efficiency and animal welfare through seamless, sustainable infrastructure that adapts to the needs of the modern producer.</p>
     </div>
+  </div>
+  <div id="adventages">
+    <div id="iconText">
+      <i class="huge robot icon custom_icon"></i>
+      <h3>Automation</h3>
+      <p>From automatic harvesting and soil testing to robotic milk collection, our software-driven systems accelerate operations while ensuring the least loss of workplaces through smart integration.</p>
+    </div>
+    <div id="iconText">
+      <i class="huge globe icon custom_icon"></i>
+      <h3>Scale & Reach</h3>
+      <p>With a team of 1,000+ experts and 5,000+ units of proprietary equipment, we support agricultural hubs across Dublin, Limerick, Waterford, and 20 additional counties.</p>
+    </div>
+    <div id="iconText">
+      <i class="huge history icon custom_icon"></i>
+      <h3>Heritage</h3>
+      <p>Founded in 1947, we have evolved from a machinery manufacturer into a green energy leader, backed by the UCD Robotics Department and government-funded innovation.</p>
+    </div>
+  </div>
+  <div id="textPhoto">
+    <div id="blackText">
+      <h2>FerBromHata Solutions Directory</h2>
+      <p>Connect with the advanced technologies designed to modernize your operations—from automated livestock care and waste management to green-energy-powered harvesting systems.</p>
+      <button onclick="window.location.href='/catalog'" class="btns">Search now!</button>
+    </div>
+    <div id="contentImg"><img src="/photos/textPhoto_search.png"></div>
+  </div>
+  <h2>Cultivating a global future of ethical and efficient agriculture</h2>
+  <p style="margin-bottom: 30px">FerBromHata is committed to expanding into international markets, replacing hazardous labor practices with efficient automation, and protecting livestock from environmental harm. Our mission is to increase farm income and improve agronomic culture while facilitating a safer, more productive work environment for staff worldwide.</p>
 </section>
+
+{{> footer}}

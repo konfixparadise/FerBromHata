@@ -1,17 +1,18 @@
 {
   "info": {
-    "appTitle": "Cataloge Maker",
+    "appTitle": "FerBromHata",
     "version": 0.1,
-    "creators": [
-      {
-        "name": "Rosanne Birney",
-        "role": "Web Developer"
-      },
-      {
-        "name": "A.N. Other",
-        "role": "Web Developer"
-      }
-    ],
-    "location": "Waterford"
+    "creator": {
+      "name": "Kyrylo Nedvyha",
+      "role": "SSD2 Student",
+      "student_number": "20113217"
+    },
+    "location": "Waterford",
+
+    "company": {
+      "phone": "+353 (1) 0001122",
+      "email": "20113217@setu.ie",
+      "address": "SETU, Cork Road, Waterford, X91 K0EK"
+    }
   } 
 }
