@@ -1,12 +1,39 @@
-<footer class="ui inverted vertical footer segment">
-        <div class="ui container">
-            <div class="ui grid">
-                <div class="eight wide column">
-                    <p>&copy {{currentYear}} {{info.creator.name}}</p>
-                </div>
-                <div class="eight wide right aligned column">
-                    {{info.creator.student_number}}
-                </div>
+<footer id="custom_footer" class="ui inverted vertical footer segment custom_footer">
+    <div class="ui container">
+        <div id="signUp">
+            <i class="huge envelope open icon custom_icon"></i>
+            <h2>Sign up to our newsletter</h2>
+            <div class="signupForm">
+                <input type="email" placeholder="example@example.com">
+                <button class="btns">Subscribe</button>
             </div>
         </div>
+        <div class="ui divider"></div>
+        <div class="ui grid">
+            <div class="four wide column contact_item">
+                <p><strong>Phone</strong><br>
+                <a href="tel:{{info.company.phone}}">{{info.company.phone}}</a></p>
+            </div>
+            <div class="two wide column"></div>
+            <div class="four wide column contact_item">
+                <p><strong>Email</strong><br>
+                <a href="mailto:{{info.company.email}}">{{info.company.email}}</a></p>
+            </div>
+            <div class="two wide column"></div>
+            <div class="four wide column contact_item">
+                <p><strong>Head office</strong><br>
+                <a href="https://www.google.com/maps/search/?api=1&query={{info.company.address}}" target="_blank">
+                {{info.company.address}}</a></p>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui grid">
+            <div class="eight wide column left aligned column">
+                &copy {{currentYear}} {{info.creator.name}}
+            </div>
+            <div class="eight wide column right aligned column">
+                {{info.creator.student_number}}
+            </div>
+        </div>
+    </div>
 </footer>
