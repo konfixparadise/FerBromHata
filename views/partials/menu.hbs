@@ -1,12 +1,41 @@
 <nav class="ui stackable menu">
-    <header class="ui header item"> <a href="/"> 
-        <img src="/bromus-logo.png"> 
-    </a></header>
+    <header class="ui header item"> 
+        <a id="logo" href="/"> 
+            <img src="/bromus-logo.png"> 
+        </a>
+    </header>
     <div class="right menu">
-        <a id="/catalog" class="item" href="/catalog"> Catalog </a>
+        <a id="home" class="item" href="/"> Home </a>
+        <div class="ui dropdown item" id="catalog_box" onclick="window.location.href='/catalog';">
+            <a id="catalog" class="item" href="/catalog"> Catalog </a> 
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a class="item" href="/catalog"> Farm Solutions </a>
+                <a class="item" href="/catalog"> Fields Solutions </a>
+                <a class="item" href="/catalog"> Other </a>
+            </div>
+        </div>
+        <a id="/about" class="item" href="/about"> About </a>
+        <a id="contact" class="item" href="#custom_footer"> Contact Us</a>
     </div>
 </nav>
 
 <script>
-    document.querySelector('#{{id}}').classList.add('active')
+    window.onload = function() {
+        if (typeof $ !== 'undefined' && $.fn.dropdown) {
+            $('.ui.dropdown').dropdown({
+                on: 'hover',
+                action: 'hide' 
+            })
+        }
+        var rawId = "{{id}}"
+        var pageId = (rawId === "/" || rawId === "") ? "home" : rawId.replace(/\//g, "") 
+        if (pageId === "catalog") { pageId = "catalog_box"; }
+        if (pageId) {
+            var element = document.getElementById(pageId)
+            if (element) {
+                element.classList.add('active')
+            }
+        }
+    };
 </script>
