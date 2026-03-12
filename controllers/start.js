@@ -9,7 +9,6 @@ const start = {
         
         const viewData = {
             title: "FerBromHata",
-            info: appStore.getAppInfo()
         }
 
         response.render('start', viewData)

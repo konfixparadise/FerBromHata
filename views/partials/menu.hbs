@@ -36,6 +36,7 @@
         const menuHeader = document.querySelector(".ui.header.item")
         const catalogBox = document.getElementById('catalog_box')
         const catalogLink = document.getElementById('catalog')
+        const contactLink = document.getElementById('contact')
 
         if (typeof $ !== 'undefined' && $.fn.dropdown) {
             $('.ui.dropdown').dropdown({
@@ -74,6 +75,13 @@
                     e.preventDefault()
                     e.stopPropagation()
                 }
+            })
+        }
+        if(contactLink) {
+            contactLink.addEventListener('click', function () {
+                setTimeout(() => {
+                    window.history.replaceState({}, document.title, window.location.pathname
+                )}, 0)
             })
         }
 
