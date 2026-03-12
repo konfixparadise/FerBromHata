@@ -50,6 +50,7 @@ body {
 
 .ui.menu.scrolled {
   border-radius: 0;
+  z-index: 9999 !important;
 }
 
 .ui.menu .header {
@@ -337,7 +338,35 @@ body {
   display: none;
 }
 
-@media only screen and (max-width: 768px){
+#filter_header {
+  text-align: center;
+  justify-content: center;
+  background-color: #004C40;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.ui.vertical.menu .item .ui.checkbox {
+  width: 100%;
+}
+
+.ui.vertical.menu .item .ui.checkbox label {
+  white-space: normal !important;
+  word-wrap: break-word;
+  display: block;
+} 
+
+.ui.fluid.btns {
+  width: 90%;
+  padding: 15px 0;
+}
+
+#clearBtn {
+  color: #FF4D4D !important;
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px){
 
   body {
     margin: 10px 0 !important;
@@ -355,6 +384,7 @@ body {
 
   .ui.menu {
     padding: 5px !important;
+    z-index: 1000 !important;
   }
 
   .ui.menu .header.item {

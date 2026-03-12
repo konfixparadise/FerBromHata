@@ -25,7 +25,7 @@
 
 <script>
     function toggleMobile() {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 800) {
             var nav = document.getElementById("nav_links")
             if (nav) nav.classList.toggle("mobile_open")
         }
@@ -46,7 +46,7 @@
         }
 
         document.addEventListener('click', function (e) {
-            const mobile = window.innerWidth < 768
+            const mobile = window.innerWidth < 800
             const mobileOpen = navLinks.classList.contains('mobile_open')
 
             if (mobile && mobileOpen) {
@@ -64,14 +64,14 @@
 
         if (catalogBox && catalogLink) {
             catalogBox.addEventListener('click', function(e) {
-                if (window.innerWidth > 768) {
+                if (window.innerWidth > 800) {
                     window.location.href = '/catalog'
                 } else {
                     e.stopPropagation();
                 }
             })
             catalogLink.addEventListener('click', function(e) {
-                if (window.innerWidth < 768) {
+                if (window.innerWidth < 800) {
                     e.preventDefault()
                     e.stopPropagation()
                 }
