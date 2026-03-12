@@ -1,11 +1,11 @@
-<footer id="custom_footer" class="ui inverted vertical footer segment custom_footer">
+<footer id="footerlink" class="ui inverted vertical footer segment custom_footer">
     <div class="ui container">
         <div id="signUp">
             <i class="huge envelope open icon custom_icon"></i>
             <h2>Sign up to our newsletter</h2>
             <div class="signupForm">
-                <input type="email" placeholder="example@example.com">
-                <button class="btns">Subscribe</button>
+                <input type="email" id="signupEmail" placeholder="example@example.com">
+                <button class="btns" onclick="signupBtn()">Subscribe</button>
             </div>
         </div>
         <div class="ui divider"></div>
@@ -37,3 +37,24 @@
         </div>
     </div>
 </footer>
+
+<script>
+
+    function signupBtn(){
+        const signupEmail = document.getElementById('signupEmail')
+        const signupAnswer = signupEmail.value.trim()
+        const pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+        if (signupAnswer === "") {
+            alert("⚠️ Problem: The email field is empty. Please enter your address.")
+            return
+        } else if (!pattern.test(signupAnswer)) {
+            alert("⚠️ Problem: Wrong style! Your email should look like: example@example.com")
+            return                
+        } else {
+            alert("✅ Success! You have been added to our newsletter.")
+            signupEmail.value = "";
+        }
+}
+
+</script>
