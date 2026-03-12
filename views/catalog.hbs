@@ -62,12 +62,12 @@
             </div>
 
             <div class="twelve wide column" style="padding-top: 0;">
-                <form action="/details" method="get" class = "ui form">
+                <form action="/details/{{id}}" method="get" class = "ui form">
                     <div class="ui fluid search">
                         <div class="ui fluid icon input">
                             <input class = "prompt" type="search" id="catalogSearch"
                             placeholder="Search FerBromHata catalogues...">
-                            <i class="search icon"></i>
+                            <i class="search icon" style="color: #004C40"></i>
                         </div>
                         <div class="results"></div>
                     </div>
@@ -84,14 +84,14 @@
                                         </h3>
                                     </a>
                                 </div>
-                                <div class="seven wide column"> 
+                                <div class="seven wide column tag_container"> 
                                     {{#each tags}}
-                                        <span class="ui basic label">{{this}}</span>
+                                        <span class="ui basic label catalog_tag">{{this}}</span>
                                     {{/each}}
                                 </div>
                                 <div class="four wide column">
                                     <a href="/details/{{id}}">
-                                        <div class="ui small image">
+                                        <div class="catalog_photo">
                                             <img src="{{photo}}">
                                         </div>
                                     </a>

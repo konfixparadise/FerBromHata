@@ -366,6 +366,36 @@ body {
   text-align: center;
 }
 
+.tag_container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  flex-direction: row !important;
+  justify-content: flex-start;
+  gap: 3px !important;
+}
+
+.catalog_tag{
+  flex: 0 0 160px !important;
+  max-width: 160px !important;
+
+  text-align: center;
+  margin: 0 !important;
+  border-color: #004C40 !important;
+  color: #004C40 !important;
+}
+
+.catalog_photo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.catalog_photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 @media only screen and (max-width: 800px){
 
   body {
@@ -459,7 +489,6 @@ body {
   .custom_footer .ui.grid > .column.contact_item {
     width: 100% !important;
     text-align: center !important;
-    margin-bottom: 20px !important;
   }
 
   .custom_footer .ui.grid > .two.wide.column {
