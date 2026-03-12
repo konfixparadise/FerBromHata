@@ -89,4 +89,14 @@
         var element = document.getElementById(pageId)
         if (element) element.classList.add('active')
     }) 
+
+    window.addEventListener('scroll', function () {
+        const menu = document.querySelector('.ui.menu')
+
+        if (window.scrollY > 10) {
+            menu.classList.add('scrolled')
+        } else {
+            menu.classList.remove('scrolled')
+        }
+    })
 </script>
