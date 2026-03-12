@@ -48,13 +48,16 @@
         if (signupAnswer === "") {
             alert("⚠️ Problem: The email field is empty. Please enter your address.")
             return
-        } else if (!pattern.test(signupAnswer)) {
+        } 
+        
+        if (!pattern.test(signupAnswer)) {
             alert("⚠️ Problem: Wrong style! Your email should look like: example@example.com")
             return                
-        } else {
-            alert("✅ Success! You have been added to our newsletter.")
-            signupEmail.value = "";
-        }
+        } 
+        
+        alert("✅ Success! You have been added to our newsletter.")
+        signupEmail.value = "";
+
 }
 
 </script>
