@@ -1,11 +1,113 @@
 {{> menu id="catalog"}}
 
-<section class="ui left aligned middle aligned segment">
+<div class="ui container">
+    <h2> FerBromHata Catalog </h2>
 
-    <h2>FerBromHata App Catalog</h2>
-    <p>
-        Catalog will be displayed here
-    </p>
-</section>
+    <div class="ui stackable grid">
+        <div class="four wide column">
+            <form action="/catalog" method="get" class="ui form">
+                <div class="ui vertical fluid menu">
+                    <div class="item">
+                        <div class="header">Filter by Category</div>
+                    </div>
+                    <div class="item">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="tag_checkbox">
+                            <label>Farm Solutions</label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="tag_checkbox">
+                            <label>Fields Solutions</label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="tag_checkbox">
+                            <label>Green Energy</label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="tag_checkbox">
+                            <label>Smart Monitoring</label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="tag_checkbox">
+                            <label>Automated Labor</label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="tag_checkbox">
+                            <label>Livestock Welfare</label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="tag_checkbox">
+                            <label>Infrastructure</label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <button type="submit" class="ui fluid">Apply</button>
+                    </div>
+                    <a class="item" href="/catalog" >Clear Filters</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="twelve wide column">
+            <form action="/details" method="get" class = "ui form">
+                <div class="ui fluid search">
+                    <div class="ui fluid icon input">
+                        <input class = "prompt" type="search" id="catalogSearch"
+                        placeholder="Search FerBromHata catalogues...">
+                        <button type="submit" class="ui icon button">
+                            <i class="search icon"></i>
+                        </button>
+                    </div>
+                    <div class="results"></div>
+                </div>
+            </form>
+
+            <div class="ui segments">
+                {{#each catalogs}}
+                    <section class="ui left aliggned middle aligned segment">
+                        <a href="/details/{{id}}">
+                            <h3 class="ui header">
+                                {{title}}
+                            </h3>
+                        </a>
+
+                        <div> 
+                            {{#each tags}}
+                                {{this}}
+                            {{/each}}
+                        </div>
+
+                        <a href="/details/{{id}}">
+                            <div class="ui small image">
+                                <img src="{{photo}}">
+                            </div>
+                        </a>
+
+                        <div class = "ui divider"></div>
+
+                        <div>
+                            <p>
+                                <b>Description:</b> {{description}}
+                            </p>
+                        </div>
+
+                    </section>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
 
 {{> footer}}
