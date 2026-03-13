@@ -7,9 +7,12 @@
         <div class="ui stackable grid">
             <div class="four wide column" style="padding: 0;">
                 <form action="/catalog" method="get" class="ui form">
-                    <div class="ui vertical fluid menu">
-                        <div class="item">
-                            <div class="header" id="filter_header">Filter by Category</div>
+                    <div class="ui vertical fluid menu" id="filter_menu">                    
+                        <div class="item" id="filter_header_container" style="cursor: pointer; position: relative">
+                            <div class="header" id="filter_header">
+                                Filter by Category
+                                <i class="angle down icon filter_icon_btn"></i>
+                            </div>
                         </div>
                         <div class="item">
                             <div class="ui checkbox">

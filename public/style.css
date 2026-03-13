@@ -338,6 +338,14 @@ body {
   display: none;
 }
 
+.filter_icon_btn {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none !important;
+}
+
 #filter_header {
   text-align: center;
   justify-content: center;
@@ -475,6 +483,18 @@ body {
     flex-direction: column !important;
     padding: 40px 5% !important;
     gap: 50px !important;
+  }
+
+  .filter_icon_btn {
+    display: block !important;
+  }
+
+  #filter_menu .item:not(:first-child) {
+    display: none;
+  }
+
+  #filter_menu.filter_open .item:not(:first-child) {
+    display: block;
   }
 
   .signupForm {
