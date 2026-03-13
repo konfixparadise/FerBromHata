@@ -13,43 +13,43 @@
                         </div>
                         <div class="item">
                             <div class="ui checkbox">
-                                <input type="checkbox" id="tag_checkbox">
+                                <input type="checkbox" name="category" value="Farm Solutions" {{#if memoryFilter.farm}}checked{{/if}}>
                                 <label>Farm Solutions</label>
                             </div>
                         </div>
                         <div class="item">
                             <div class="ui checkbox">
-                                <input type="checkbox" id="tag_checkbox">
+                                <input type="checkbox" name="category" value="Fields Solutions" {{#if memoryFilter.fields}}checked{{/if}}>
                                 <label>Fields Solutions</label>
                             </div>
                         </div>
                         <div class="item">
                             <div class="ui checkbox">
-                                <input type="checkbox" id="tag_checkbox">
+                                <input type="checkbox" name="category" value="Green Energy" {{#if memoryFilter.green}}checked{{/if}}>
                                 <label>Green Energy</label>
                             </div>
                         </div>
                         <div class="item">
                             <div class="ui checkbox">
-                                <input type="checkbox" id="tag_checkbox">
+                                <input type="checkbox" name="category" value="Smart Monitoring" {{#if memoryFilter.smart}}checked{{/if}}>
                                 <label>Smart Monitoring</label>
                             </div>
                         </div>
                         <div class="item">
                             <div class="ui checkbox">
-                                <input type="checkbox" id="tag_checkbox">
+                                <input type="checkbox" name="category" value="Automated Labor" {{#if memoryFilter.automated}}checked{{/if}}>
                                 <label>Automated Labor</label>
                             </div>
                         </div>
                         <div class="item">
                             <div class="ui checkbox">
-                                <input type="checkbox" id="tag_checkbox">
+                                <input type="checkbox" name="category" value="Livestock Welfare" {{#if memoryFilter.livestock}}checked{{/if}}>
                                 <label>Livestock Welfare</label>
                             </div>
                         </div>
                         <div class="item">
                             <div class="ui checkbox">
-                                <input type="checkbox" id="tag_checkbox">
+                                <input type="checkbox" name="category" value="Infrastructure" {{#if memoryFilter.infrastructure}}checked{{/if}}>
                                 <label>Infrastructure</label>
                             </div>
                         </div>
@@ -74,37 +74,44 @@
                 </form>
 
                 <div class="ui segments">
-                    {{#each catalogs}}
-                        <section class="ui segment" style="padding: 16px;">
-                            <div class="ui stackable middle aligned grid">
-                                <div class="five wide column">
-                                    <a href="/details/{{id}}">
-                                        <h3 class="ui header">
-                                            {{title}}
-                                        </h3>
-                                    </a>
+                    {{#if catalogs.length}}
+                        {{#each catalogs}}
+                            <section class="ui segment" style="padding: 16px;">
+                                <div class="ui stackable middle aligned grid">
+                                    <div class="five wide column">
+                                        <a href="/details/{{id}}">
+                                            <h3 class="ui header">
+                                                {{title}}
+                                            </h3>
+                                        </a>
+                                    </div>
+                                    <div class="seven wide column tag_container"> 
+                                        {{#each tags}}
+                                            <span class="ui basic label catalog_tag">{{this}}</span>
+                                        {{/each}}
+                                    </div>
+                                    <div class="four wide column">
+                                        <a href="/details/{{id}}">
+                                            <div class="catalog_photo">
+                                                <img src="{{photo}}">
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="seven wide column tag_container"> 
-                                    {{#each tags}}
-                                        <span class="ui basic label catalog_tag">{{this}}</span>
-                                    {{/each}}
+                                <div class = "ui divider"></div>
+                                <div>
+                                    <p style="text-align: left; padding: 0;">
+                                        <b>Description:</b> {{description}}
+                                    </p>
                                 </div>
-                                <div class="four wide column">
-                                    <a href="/details/{{id}}">
-                                        <div class="catalog_photo">
-                                            <img src="{{photo}}">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class = "ui divider"></div>
-                            <div>
-                                <p style="text-align: left; padding: 0;">
-                                    <b>Description:</b> {{description}}
-                                </p>
-                            </div>
+                            </section>
+                        {{/each}}
+                    {{else}}
+                        <section class="ui segment" style="padding: 60px 20px; text-align:center">
+                            <h3 class="ui header" style="color: #004C40;"> No catalogs match your selected filters. </h3>
+                            <p>Please try selecting different categories or click "Clear Filters".</p>
                         </section>
-                    {{/each}}
+                    {{/if}} 
                 </div>
             </div>
         </div>

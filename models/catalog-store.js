@@ -9,8 +9,14 @@ const catalogStore = {
     tagsArray: 'tags',
     productArray: 'products',
 
-    getAllProducts() {
+    getAllCatalogs() {
         return this.store.findAll(this.collection)
+    },
+
+    getCatalogsByTags(tags) {
+        return this.store.findBy(this.collection, (catalog) => {
+            return catalog.tags && tags.every(tag => catalog.tags.includes(tag))
+        })
     }
 }
 

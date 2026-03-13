@@ -7,9 +7,39 @@ const catalog = {
   createView(request, response) {
     logger.info("Catalog page loading!")
     
+    let selectedCategories = request.query.category
+    let displayCatalogs = [];
+
+    const memoryFilter = {
+      farm: false,
+      fields: false,
+      green: false,
+      smart: false,
+      automated: false,
+      livestock: false,
+      infrastructure: false
+    }
+
+    if (selectedCategories) {
+      if(!Array.isArray(selectedCategories)) {
+        selectedCategories = [selectedCategories]
+      }
+
+      memoryFilter.farm = selectedCategories.includes("Farm Solutions")
+      memoryFilter.fields = selectedCategories.includes("Fields Solutions")
+      memoryFilter.green = selectedCategories.includes("Green Energy")
+      memoryFilter.smart = selectedCategories.includes("Smart Monitoring")
+      memoryFilter.automated = selectedCategories.includes("Automated Labor")
+      memoryFilter.livestock = selectedCategories.includes("Livestock Welfare")
+      memoryFilter.infrastructure = selectedCategories.includes("Infrastructure")
+
+      displayCatalogs = catalogStore.getCatalogsByTags(selectedCategories)
+    } else displayCatalogs = catalogStore.getAllCatalogs()
+
     const viewData = {
       title: 'Catalog',
-      catalogs: catalogStore.getAllProducts()
+      catalogs: displayCatalogs,
+      memoryFilter: memoryFilter
     }
     
     logger.debug(viewData.catalogs)
