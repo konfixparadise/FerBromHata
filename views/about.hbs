@@ -1,11 +1,32 @@
 {{> menu id="about"}}
 
-<section class="ui left aligned middle aligned segment">
+<section class="ui segment ferbrom_segment">
+    <div class="ui stackable two column grid">
+        <div class="column">
+            <h2 class="ui header ferbrom_header">About</h2>
+            <p class="ferbrom_text" style="text-align: justify; color: black;">{{info.company.about}}</p>
+            <h2 class="ui header ferbrom_header">History</h2>
+            <p class="ferbrom_text" style="text-align: justify; color: black;">{{info.company.history}}</p>
+        </div>
+        <div class="column" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="img_ferbrom">
+                <img src="/about.png">
+            </div>
 
-    <h2>FerBromHata App Catalog</h2>
-    <p>
-        Catalog will be displayed here
-    </p>
+            <div class="img_ferbrom">
+                <iframe 
+                    width="100%"
+                    height="250"
+                    frameborder="0"
+                    style="border: 0;"
+                    src="https://maps.google.com/maps?q={{info.company.address}}&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="img_ferbrom">
+                <img src="/history.png">
+            </div>
+        </div>
+    </div>
 </section>
-
 {{> footer}}

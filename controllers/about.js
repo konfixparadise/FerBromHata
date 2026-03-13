@@ -7,7 +7,7 @@ const about = {
     logger.info("About page loading!")
     
     const viewData = {
-      title: 'FerBromHata App About'
+      title: 'About'
     }
 
     response.render('about', viewData)
