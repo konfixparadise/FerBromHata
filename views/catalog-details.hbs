@@ -1,0 +1,48 @@
+{{> menu id="catalog"}}
+
+<section class="ui segment">
+    <div class="ui container">
+        <div>
+            <a href="/catalog" class="ui basic button">
+                <i class="left chevron icon"></i> Back
+            </a>
+        </div>
+        <div class="ui stackable middle aligned grid">
+            <div class="ten wide column">
+                <h2 class="ui header">
+                    {{catalog.title}}
+                </h2>
+                <div class="tag_container">
+                    {{#each  catalog.tags}}
+                        <span class="ui basic label catalog_tag">{{this}}</span>
+                    {{/each}}
+                </div>
+                <div class="six wide column">
+                    <div class="catalog_photo">
+                        <img src="{{catalog.photo}}">
+                    </div>
+                </div>
+            </div>
+            <div class="ui divider"></div>
+            <div class="ui three stackable cards">
+                {{#each catalog.products}}
+                    <div class="card">
+                        <div class="image">
+                            <img src="{{photo}}">
+                        </div>
+                        <div class="content">
+                            <div class="header">
+                                {{title}}
+                            </div>
+                            <div class="description">
+                                {{description}}
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> footer}}
