@@ -404,6 +404,34 @@ body {
   border-radius: 8px;
 }
 
+.back_btn {
+  border-radius: 150px !important;
+  color: #004C40 !important;
+  border: 1px solid #004C40 !important;
+  transition: all 0.3s ease;
+}
+
+.details_title {
+  text-align: left !important;
+  background-color: #083027;
+  color: white !important;
+  border-radius: 10px;
+  padding: 10px !important;
+}
+
+.details_col .catalog_tag {
+  color: white !important;
+  background-color: #00DC75 !important;
+}
+
+.details_desc_cat {
+  text-align: left !important;
+  padding: 0 !important;
+  margin-top: 15px;
+  object-fit: cover;
+  color: black !important;
+}
+
 @media only screen and (max-width: 800px){
 
   body {
@@ -495,6 +523,16 @@ body {
 
   #filter_menu.filter_open .item:not(:first-child) {
     display: block;
+  }
+
+  .details_col,
+  .details_title,
+  .details_desc_cat {
+    text-align: center !important;
+  }
+
+  .details_col .tag_container {
+    justify-content: center;
   }
 
   .signupForm {

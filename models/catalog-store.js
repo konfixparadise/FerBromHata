@@ -17,6 +17,10 @@ const catalogStore = {
         return this.store.findBy(this.collection, (catalog) => {
             return catalog.tags && tags.every(tag => catalog.tags.includes(tag))
         })
+    },
+    
+    getCatalogById(id) {
+        return  this.store.findOneBy(this.collection, (catalog) => catalog.id === id)
     }
 }
 
