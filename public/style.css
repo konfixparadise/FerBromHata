@@ -432,6 +432,37 @@ body {
   color: black !important;
 }
 
+.ferbrom_segment {
+  padding: 3em !important;
+  justify-content: center !important;
+}
+
+.ferbrom_header {
+  color: white !important;
+  background-color: #083027;
+  display: inline-block;
+  margin-bottom: 30px !important;
+}
+
+.img_ferbrom {
+  max-width: 650px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.img_ferbrom img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.img_freedom iframe{
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 800px){
 
   body {
