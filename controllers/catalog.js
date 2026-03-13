@@ -9,6 +9,7 @@ const catalog = {
     
     let selectedCategories = request.query.category
     let displayCatalogs = [];
+    const allCatalogs = catalogStore.getAllCatalogs()
 
     const memoryFilter = {
       farm: false,
@@ -34,12 +35,18 @@ const catalog = {
       memoryFilter.infrastructure = selectedCategories.includes("Infrastructure")
 
       displayCatalogs = catalogStore.getCatalogsByTags(selectedCategories)
-    } else displayCatalogs = catalogStore.getAllCatalogs()
+    } else displayCatalogs = allCatalogs
+
+    const searchDataAll = allCatalogs.map(catalog => ({
+      title: catalog.title,
+      url: `/details/${catalog.id}`
+    }))
 
     const viewData = {
       title: 'Catalog',
       catalogs: displayCatalogs,
-      memoryFilter: memoryFilter
+      memoryFilter: memoryFilter,
+      searchData: JSON.stringify(searchDataAll)
     }
     
     logger.debug(viewData.catalogs)

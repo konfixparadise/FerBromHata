@@ -17,5 +17,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         })
+
+        $('.ui.checkbox').checkbox()
+
+        const searching = document.getElementById('searchDataJSON')
+        
+        if (searching) {
+            const searchContent = JSON.parse(searching.textContent)
+
+            $('.ui.search').search({
+                source: searchContent,
+                searchFields: ['title'],
+                showNoResults: false
+
+            })
+
+            function manSearch() {
+                const query = $('#catalogSearch').val().toLowerCase().trim()
+                if (!query) return;
+
+                const match = searchContent.find(item => item.title.toLowerCase().includes(query))
+
+                if (match) {
+                    window.location.href = match.url
+                } else {
+                    window.location.href = '/catalog'
+                }
+            }
+            $('#catalogSearch').on('submit', function(e) {
+                e.preventDefault()
+                manSearch()
+            })
+        }
     }
 })
