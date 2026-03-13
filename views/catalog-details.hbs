@@ -1,15 +1,15 @@
 {{> menu id="catalog"}}
 
-<section class="ui segment">
+<section class="ui segment" style="padding: 30px 0;">
     <div class="ui container">
-        <div>
-            <a href="/catalog" class="ui basic button">
+        <div style="margin-bottom: 20px;">
+            <a href="/catalog" class="ui basic button back_btn">
                 <i class="left chevron icon"></i> Back
             </a>
         </div>
         <div class="ui stackable middle aligned grid">
-            <div class="ten wide column">
-                <h2 class="ui header">
+            <div class="ten wide column details_col">
+                <h2 class="ui header details_title">
                     {{catalog.title}}
                 </h2>
                 <div class="tag_container">
@@ -17,6 +17,8 @@
                         <span class="ui basic label catalog_tag">{{this}}</span>
                     {{/each}}
                 </div>
+                <p class="details_desc_cat">{{catalog.description}}</p>
+            </div>
                 <div class="six wide column">
                     <div class="catalog_photo">
                         <img src="{{catalog.photo}}">
@@ -27,21 +29,20 @@
             <div class="ui three stackable cards">
                 {{#each catalog.products}}
                     <div class="card">
-                        <div class="image">
+                        <div class="image products_image">
                             <img src="{{photo}}">
                         </div>
-                        <div class="content">
-                            <div class="header">
+                        <div class="content product_content">
+                            <div class="header product_title">
                                 {{title}}
                             </div>
-                            <div class="description">
+                            <div class="description product_description">
                                 {{description}}
                             </div>
                         </div>
                     </div>
                 {{/each}}
             </div>
-        </div>
     </div>
 </section>
 
