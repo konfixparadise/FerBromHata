@@ -1,0 +1,314 @@
+{
+  "catalogCollection": [
+    {
+      "id": "01",
+      "title": "Dairy Automation Systems",
+      "photo": "/catalogPictures/dairy-automation.png",
+      "tags": [
+        "Farm Solutions",
+        "Smart Monitoring",
+        "Automated Labor"
+      ],
+      "description": "Advanced solutions for modernizing dairy operations, reducing staff workload, and ensuring animal health through automated monitoring and collection.",
+      "products": [
+        {
+          "id": "01",
+          "title": "AutoMilk Collector",
+          "photo": "/productPictures/automilk-collector.png",
+          "description": "An automated milk collection system that gently and efficiently milks cows while tracking yield data."
+        },
+        {
+          "id": "02",
+          "title": "CowCam Tracker",
+          "photo": "/productPictures/cowcam-tracker.png",
+          "description": "A smart video surveillance system powered by AI to monitor cow health, condition, and movement in real-time."
+        },
+        {
+          "id": "03",
+          "title": "DairyClean Pro",
+          "photo": "/productPictures/dairyclean-pro.png",
+          "description": "An automated waste removal system that keeps barns hygienic, protecting animals from dangerous or unsanitary environments."
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Poultry Management",
+      "photo": "/catalogPictures/poultry-management.png",
+      "tags": [
+        "Farm Solutions",
+        "Automated Labor",
+        "Livestock Welfare"
+      ],
+      "description": "Fully automated systems designed to streamline poultry farming, from egg collection to environmental maintenance.",
+      "products": [
+        {
+          "id": "04",
+          "title": "EggGatherBot",
+          "photo": "/productPictures/egggatherbot.png",
+          "description": "A fully automated, gentle egg collection conveyor that drastically reduces manual labor."
+        },
+        {
+          "id": "05",
+          "title": "ShellShine Auto-Cleaner",
+          "photo": "/productPictures/shellshine-autocleaner.png",
+          "description": "An automated washing and sanitization unit integrated directly into the collection line."
+        },
+        {
+          "id": "06",
+          "title": "CluckFeeder Auto",
+          "photo": "/productPictures/cluckfeeder-auto.png",
+          "description": "A programmable, automated feeding and watering system that ensures precise nutrition for poultry flocks."
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "General Livestock Care",
+      "photo": "/catalogPictures/livestock-care.png",
+      "tags": [
+        "Farm Solutions",
+        "Livestock Welfare",
+        "Infrastructure"
+      ],
+      "description": "Automated feeding and waste cleaning systems adaptable for various livestock to facilitate the work process for farm staff.",
+      "products": [
+        {
+          "id": "07",
+          "title": "OmniFeeder System",
+          "photo": "/productPictures/omnifeeder-system.png",
+          "description": "Automated feeding stations that dispense customized feed mixes based on livestock needs."
+        },
+        {
+          "id": "08",
+          "title": "WasteAway Conveyor",
+          "photo": "/productPictures/wasteaway-conveyor.png",
+          "description": "A low-maintenance, automated animal waste cleaning system that integrates into existing barn structures."
+        },
+        {
+          "id": "09",
+          "title": "SafePen Upgrades",
+          "photo": "/productPictures/safepen-upgrades.png",
+          "description": "Animal-safe, structurally reinforced enclosure upgrades designed to prevent accidental harm and improve animal welfare."
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Crop Care & Agronomy",
+      "photo": "/catalogPictures/crop-care.png",
+      "tags": [
+        "Fields Solutions",
+        "Smart Monitoring",
+        "Green Energy"
+      ],
+      "description": "Smart systems for monitoring and maintaining optimal crop health, improving agronomic culture care, and increasing farm income.",
+      "products": [
+        {
+          "id": "10",
+          "title": "AquaDrop Irrigator",
+          "photo": "/productPictures/aquadrop-irrigator.png",
+          "description": "An automated, green-energy-powered watering system that adjusts output based on real-time weather and soil data."
+        },
+        {
+          "id": "11",
+          "title": "SoilSense Probes",
+          "photo": "/productPictures/soilsense-probes.png",
+          "description": "Deep-earth sensors that provide automated, real-time soil quality and moisture testing."
+        },
+        {
+          "id": "12",
+          "title": "PestShield Drone",
+          "photo": "/productPictures/pestshield-drone.png",
+          "description": "An automated aerial pest control system that safely monitors and deters pests without heavy chemical reliance."
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Automated Harvesting",
+      "photo": "/catalogPictures/automated-harvesting.png",
+      "tags": [
+        "Fields Solutions",
+        "Automated Labor",
+        "Smart Monitoring"
+      ],
+      "description": "Contemporary structural machinery to automate the harvesting of crops, accelerating operations and replacing manual field labor.",
+      "products": [
+        {
+          "id": "13",
+          "title": "AutoHarvester X1",
+          "photo": "/productPictures/autoharvester-x1.png",
+          "description": "A high-efficiency, automated combine system for rapid grain and staple crop harvesting."
+        },
+        {
+          "id": "14",
+          "title": "GentlePick Arm",
+          "photo": "/productPictures/gentlepick-arm.png",
+          "description": "A robotic arm attachment designed for the automated, bruise-free harvesting of delicate fruits and vegetables."
+        },
+        {
+          "id": "15",
+          "title": "CropSort Conveyor",
+          "photo": "/productPictures/cropsort-conveyor.png",
+          "description": "An automated field-side sorting system that grades and cleans crops immediately after harvesting."
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Wind Energy Infrastructure",
+      "photo": "/catalogPictures/wind-energy.png",
+      "tags": [
+        "Farm Solutions",
+        "Fields Solutions",
+        "Green Energy"
+      ],
+      "description": "FerBromHata's core green energy solutions, utilizing wind power to sustainably run farm automation equipment.",
+      "products": [
+        {
+          "id": "16",
+          "title": "AeroFarm Turbine",
+          "photo": "/productPictures/aerofarm-turbine.png",
+          "description": "A highly efficient wind turbine specifically scaled and designed to power farmstead operations."
+        },
+        {
+          "id": "17",
+          "title": "BreezeStore Battery Hub",
+          "photo": "/productPictures/breezestore-battery.png",
+          "description": "High-capacity energy storage units to bank wind power for uninterrupted automated farming."
+        },
+        {
+          "id": "18",
+          "title": "WindSync Controller",
+          "photo": "/productPictures/windsync-controller.png",
+          "description": "A smart grid management tool that distributes wind energy directly to active automated machinery."
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Solar Power Systems",
+      "photo": "/catalogPictures/solar-power.png",
+      "tags": [
+        "Fields Solutions",
+        "Farm Solutions",
+        "Infrastructure"
+      ],
+      "description": "Alternative green energy solutions utilizing solar panels to power remote field equipment and sensors.",
+      "products": [
+        {
+          "id": "19",
+          "title": "SunField Panels",
+          "photo": "/productPictures/sunfield-panels.png",
+          "description": "Durable, weather-resistant solar panels optimized for agricultural environments and field installations."
+        },
+        {
+          "id": "20",
+          "title": "SolarTrak Mounts",
+          "photo": "/productPictures/solartrak-mounts.png",
+          "description": "Automated mounts that follow the sun's trajectory to maximize energy capture for field operations."
+        },
+        {
+          "id": "21",
+          "title": "FieldCharge Station",
+          "photo": "/productPictures/fieldcharge-station.png",
+          "description": "Solar-powered docking hubs where automated rovers and drones can recharge without returning to the main farmstead."
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Control Software Subscriptions",
+      "photo": "/catalogPictures/software-subscriptions.png",
+      "tags": [
+        "Farm Solutions",
+        "Infrastructure",
+        "Smart Monitoring"
+      ],
+      "description": "The central software systems required to control, monitor, and manage all FerBromHata automated functions across the farm.",
+      "products": [
+        {
+          "id": "22",
+          "title": "FerBrom OS - Basic Rate",
+          "photo": "/productPictures/ferbrom-os-basic.png",
+          "description": "An entry-level subscription for managing single-system automation (e.g., just poultry or just irrigation)."
+        },
+        {
+          "id": "23",
+          "title": "FerBrom OS - Advanced Rate",
+          "photo": "/productPictures/ferbrom-os-advanced.png",
+          "description": "A comprehensive control system for managing multi-faceted farm automation with real-time video and data analytics."
+        },
+        {
+          "id": "24",
+          "title": "FerBrom OS - Enterprise Rate",
+          "photo": "/productPictures/ferbrom-os-enterprise.png",
+          "description": "Full-scale software for large or multi-location farms, featuring international market compliance and advanced remote control."
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Structural Farm Upgrades",
+      "photo": "/catalogPictures/structural-upgrades.png",
+      "tags": [
+        "Farm Solutions",
+        "Infrastructure",
+        "Green Energy"
+      ],
+      "description": "Legacy and modern construction components designed to upgrade and maintain farmsteads without the need for full reconstruction.",
+      "products": [
+        {
+          "id": "25",
+          "title": "RetroFit Trusses",
+          "photo": "/productPictures/retrofit-trusses.png",
+          "description": "Modernized, heavy-duty trusses designed to support new automated equipment while fitting into existing agricultural machinery and barns."
+        },
+        {
+          "id": "26",
+          "title": "EcoInsulate Panels",
+          "photo": "/productPictures/ecoinsulate-panels.png",
+          "description": "Easy-to-install structural panels that upgrade the thermal efficiency of older farm buildings to green era standards."
+        },
+        {
+          "id": "27",
+          "title": "SmartVent System",
+          "photo": "/productPictures/smartvent-system.png",
+          "description": "An automated climate control ventilation system easily retrofitted into traditional livestock housing."
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Experimental UCD Robotics",
+      "photo": "/catalogPictures/ucd-robotics.png",
+      "tags": [
+        "Fields Solutions",
+        "Automated Labor",
+        "Green Energy"
+      ],
+      "description": "Cutting-edge, experimental machine solutions developed in partnership with the University College Dublin Robotics and Engineering Department.",
+      "products": [
+        {
+          "id": "28",
+          "title": "UCD-Rover Beta",
+          "photo": "/productPictures/ucd-rover-beta.png",
+          "description": "An experimental, machine-learning-driven field rover that scouts crops and adapts to new terrain."
+        },
+        {
+          "id": "29",
+          "title": "EduBot Harvester",
+          "photo": "/productPictures/edubot-harvester.png",
+          "description": "An academic prototype harvesting arm that uses advanced vision to learn and identify different crop ripeness levels."
+        },
+        {
+          "id": "30",
+          "title": "GreenGrid Simulator",
+          "photo": "/productPictures/greengrid-simulator.png",
+          "description": "An advanced software planning tool that helps farms simulate the most efficient layout for wind and solar integration before installation."
+        }
+      ]
+    }
+  ]
+}

@@ -5,11 +5,14 @@ import {create} from 'express-handlebars'
 import routes from './routes.js'
 import logger from './utils/logger.js'
 
+import appStore from "./models/app-store.js"
+
 const app = express()
 const port = 3000;
 
 app.use(express.static("public"))
 app.use((request, response, next) => {
+    response.locals.info = appStore.getAppInfo();
     response.locals.currentYear = new Date().getFullYear()
     next()
 })

@@ -1,11 +1,128 @@
 {{> menu id="catalog"}}
 
-<section class="ui left aligned middle aligned segment">
+<section class="ui segment" style="padding: 40px 0;">
+    <div class="ui container">
+        <h2 style="margin-bottom: 30px;"> FerBromHata Catalog </h2>
 
-    <h2>FerBromHata App Catalog</h2>
-    <p>
-        Catalog will be displayed here
-    </p>
+        <div class="ui stackable grid">
+            <div class="four wide column" style="padding: 0;">
+                <form action="/catalog" method="get" class="ui form">
+                    <div class="ui vertical fluid menu" id="filter_menu">                    
+                        <div class="item" id="filter_header_container" style="cursor: pointer; position: relative">
+                            <div class="header" id="filter_header">
+                                Filter by Category
+                                <i class="angle down icon filter_icon_btn"></i>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="category" value="Farm Solutions" {{#if memoryFilter.farm}}checked{{/if}}>
+                                <label>Farm Solutions</label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="category" value="Fields Solutions" {{#if memoryFilter.fields}}checked{{/if}}>
+                                <label>Fields Solutions</label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="category" value="Green Energy" {{#if memoryFilter.green}}checked{{/if}}>
+                                <label>Green Energy</label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="category" value="Smart Monitoring" {{#if memoryFilter.smart}}checked{{/if}}>
+                                <label>Smart Monitoring</label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="category" value="Automated Labor" {{#if memoryFilter.automated}}checked{{/if}}>
+                                <label>Automated Labor</label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="category" value="Livestock Welfare" {{#if memoryFilter.livestock}}checked{{/if}}>
+                                <label>Livestock Welfare</label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="category" value="Infrastructure" {{#if memoryFilter.infrastructure}}checked{{/if}}>
+                                <label>Infrastructure</label>
+                            </div>
+                        </div>
+                        <div class="item" style="text-align: center;">
+                            <button type="submit" class="ui fluid btns" style="margin: 0"> Apply </button>
+                        </div>
+                        <a class="item" href="/catalog" id="clearBtn">Clear Filters</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="twelve wide column" style="padding-top: 0;">
+                <form id="catalogSearch" class = "ui form">
+                    <div class="ui fluid search">
+                        <div class="ui fluid icon input">
+                            <input class = "prompt" type="search" id="catalogSearch"
+                            placeholder="Search FerBromHata catalogues...">
+                            <i class="search icon" id="searchBtn" style="color: #004C40;"></i>
+                        </div>
+                        <div class="results"></div>
+                    </div>
+                </form>
+
+                <div class="ui segments">
+                    {{#if catalogs.length}}
+                        {{#each catalogs}}
+                            <section class="ui segment" style="padding: 16px;">
+                                <div class="ui stackable middle aligned grid">
+                                    <div class="five wide column">
+                                        <a href="/details/{{id}}">
+                                            <h3 class="ui header">
+                                                {{title}}
+                                            </h3>
+                                        </a>
+                                    </div>
+                                    <div class="seven wide column tag_container"> 
+                                        {{#each tags}}
+                                            <span class="ui basic label catalog_tag">{{this}}</span>
+                                        {{/each}}
+                                    </div>
+                                    <div class="four wide column">
+                                        <a href="/details/{{id}}">
+                                            <div class="catalog_photo">
+                                                <img src="{{photo}}">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class = "ui divider"></div>
+                                <div>
+                                    <p style="text-align: left; padding: 0;">
+                                        <b>Description:</b> {{description}}
+                                    </p>
+                                </div>
+                            </section>
+                        {{/each}}
+                    {{else}}
+                        <section class="ui segment" style="padding: 60px 20px; text-align:center">
+                            <h3 class="ui header" style="color: #004C40;"> No catalogs match your selected filters. </h3>
+                            <p>Please try selecting different categories or click "Clear Filters".</p>
+                        </section>
+                    {{/if}} 
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<script type="application/json" id="searchDataJSON">
+    {{{searchData}}}
+</script>
 
 {{> footer}}

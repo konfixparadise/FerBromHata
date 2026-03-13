@@ -43,6 +43,14 @@ body {
   align-items: center !important;
   min-height: 5em;
   border-radius: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.ui.menu.scrolled {
+  border-radius: 0;
+  z-index: 9999 !important;
 }
 
 .ui.menu .header {
@@ -330,7 +338,73 @@ body {
   display: none;
 }
 
-@media only screen and (max-width: 768px){
+.filter_icon_btn {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none !important;
+}
+
+#filter_header {
+  text-align: center;
+  justify-content: center;
+  background-color: #004C40;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.ui.vertical.menu .item .ui.checkbox {
+  width: 100%;
+}
+
+.ui.vertical.menu .item .ui.checkbox label {
+  white-space: normal !important;
+  word-wrap: break-word;
+  display: block;
+} 
+
+.ui.fluid.btns {
+  width: 90%;
+  padding: 15px 0;
+}
+
+#clearBtn {
+  color: #FF4D4D !important;
+  text-align: center;
+}
+
+.tag_container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  flex-direction: row !important;
+  justify-content: flex-start;
+  gap: 3px !important;
+}
+
+.catalog_tag{
+  flex: 0 0 160px !important;
+  max-width: 160px !important;
+
+  text-align: center;
+  margin: 0 !important;
+  border-color: #004C40 !important;
+  color: #004C40 !important;
+}
+
+.catalog_photo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.catalog_photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 800px){
 
   body {
     margin: 10px 0 !important;
@@ -348,6 +422,7 @@ body {
 
   .ui.menu {
     padding: 5px !important;
+    z-index: 1000 !important;
   }
 
   .ui.menu .header.item {
@@ -410,6 +485,18 @@ body {
     gap: 50px !important;
   }
 
+  .filter_icon_btn {
+    display: block !important;
+  }
+
+  #filter_menu .item:not(:first-child) {
+    display: none;
+  }
+
+  #filter_menu.filter_open .item:not(:first-child) {
+    display: block;
+  }
+
   .signupForm {
     flex-direction: column !important;
     gap: 15px !important;
@@ -422,7 +509,6 @@ body {
   .custom_footer .ui.grid > .column.contact_item {
     width: 100% !important;
     text-align: center !important;
-    margin-bottom: 20px !important;
   }
 
   .custom_footer .ui.grid > .two.wide.column {
