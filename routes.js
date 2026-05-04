@@ -8,6 +8,7 @@ import about from './controllers/about.js'
 import details from './controllers/catalog-details.js'
 import login from './controllers/login.js'
 import accounts from './controllers/accounts.js'
+import admin from './controllers/admin.js'
 
 router.get('/', start.createView)
 router.get('/catalog', catalog.createView)
@@ -18,9 +19,7 @@ router.post('/register', accounts.register)
 router.post('/authenticate', accounts.authenticate)
 router.get('/logout', accounts.logout)
 
-router.get('/admin', accounts.requireAdmin, (request, response) => {
-    response.send('Admin panel — coming soon!')
-})
+router.get('/admin', accounts.requireAdmin, admin.createView)
 
 router.get('/error', (request, response) => response.status(404).end('Page not found!'))
 
