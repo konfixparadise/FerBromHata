@@ -2,11 +2,13 @@
 
 import logger from "../utils/logger.js"
 import catalogStore from "../models/catalog-store.js"
+import accounts from "./accounts.js"
 
 const catalog = {
   createView(request, response) {
     logger.info("Catalog page loading!")
-    
+    const loggedInUser = accounts.getCurrentUser(request)
+
     let selectedCategories = request.query.category
     let displayCatalogs = [];
     const allCatalogs = catalogStore.getAllCatalogs()
@@ -46,14 +48,16 @@ const catalog = {
       title: 'Catalog',
       catalogs: displayCatalogs,
       memoryFilter: memoryFilter,
-      searchData: JSON.stringify(searchDataAll)
+      searchData: JSON.stringify(searchDataAll),
+      loggedInUser: loggedInUser,
+      isAdmin: loggedInUser && loggedInUser.isAdmin,
+      fullname: loggedInUser ? loggedInUser.firstName + ' ' + loggedInUser.lastName : ''
     }
-    
+
     logger.debug(viewData.catalogs)
 
     response.render('catalog', viewData)
   }
-  
 }
 
 export default catalog
