@@ -1,23 +1,22 @@
 'use strict'
 
 import logger from "../utils/logger.js"
-import appStore from "../models/app-store.js"
 import accounts from "./accounts.js"
 
-const start = {
+const about = {
     createView(request, response) {
-        logger.info("Start page loading!")
+        logger.info("About page loading!")
         const loggedInUser = accounts.getCurrentUser(request)
 
         const viewData = {
-            title: "FerBromHata",
+            title: 'About',
             loggedInUser: loggedInUser,
             isAdmin: loggedInUser && loggedInUser.isAdmin,
             fullname: loggedInUser ? loggedInUser.firstName + ' ' + loggedInUser.lastName : ''
         }
 
-        response.render('start', viewData)
+        response.render('about', viewData)
     }
 }
 
-export default start
+export default about
