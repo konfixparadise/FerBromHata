@@ -21,7 +21,6 @@ app.use((request, response, next) => {
     next()
 })
 
-app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(fileUpload({ useTempFiles: true }))

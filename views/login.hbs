@@ -1,0 +1,75 @@
+{{> menu id="login"}}
+
+<section class="ui segment login_segment">
+    <div class="ui container">
+        <div class="login_card">
+            <div class="ui two top attached buttons login_tabs">
+                <button type="button" class="ui button active_tab" id="loginTab"> Log In </button>
+                <button type="button" class="ui button" id="registerTab"> Register </button>
+            </div>
+
+            <div class="ui attached segment login_form_wrap">
+                <form id="loginForm" class="ui form" action="/authenticate" method="POST">
+                    <h3 class="ui header login_header"> Welcome back to FerBromHata </h3>
+                    <div class="field">
+                        <label> Email </label>
+                        <input type="email" name="email" placeholder="example@example.com" required autofocus>
+                    </div>
+                    <div class="field">
+                        <label> Password </label>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="ui fluid btns login_submit"> Log In </button>
+                </form>
+
+                <form id="registerForm" class="ui form hide" action="/register" method="POST">
+                    <h3 class="ui header login_header"> Create your FerBromHata account </h3>
+                    <div class="two fields">
+                        <div class="field">
+                            <label> First Name </label>
+                            <input type="text" name="firstName" placeholder="First Name" required>
+                        </div>
+                        <div class="field">
+                            <label> Last Name </label>
+                            <input type="text" name="lastName" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label> Email </label>
+                        <input type="email" name="email" placeholder="example@example.com" required>
+                    </div>
+                    <div class="field">
+                        <label> Password </label>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="ui fluid btns login_submit"> Register </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loginTab = document.getElementById('loginTab')
+        const registerTab = document.getElementById('registerTab')
+        const loginForm = document.getElementById('loginForm')
+        const registerForm = document.getElementById('registerForm')
+
+        loginTab.addEventListener('click', function() {
+            loginTab.classList.add('active_tab')
+            registerTab.classList.remove('active_tab')
+            loginForm.classList.remove('hide')
+            registerForm.classList.add('hide')
+        })
+
+        registerTab.addEventListener('click', function() {
+            registerTab.classList.add('active_tab')
+            loginTab.classList.remove('active_tab')
+            registerForm.classList.remove('hide')
+            loginForm.classList.add('hide')
+        })
+    })
+</script>
+
+{{> footer}}

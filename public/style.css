@@ -482,6 +482,57 @@ body {
   border-radius: 10px;
 }
 
+.login_segment {
+    padding: 50px !important;
+}
+
+.login_card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.login_tabs .ui.button {
+    background-color: #004C40;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0 !important;
+    border: 1px solid #d4d4d5 !important;
+    border-bottom: none !important;
+}
+
+.login_tabs .active_tab {
+    background-color: #EBFFF5 !important;
+    color: #004C40 !important;
+    border-color: #004C40 !important;
+}
+
+.login_form_wrap {
+    border-radius: 0 0 10px 10px !important;
+    padding: 30px !important;
+    background-color: #EBFFF5 !important;
+}
+
+.login_header {
+    color: #004C40 !important;
+    text-align: center;
+    margin-bottom: 25px !important;
+}
+
+.login_form_wrap .field label {
+    color: #004C40 !important;
+}
+
+.login_submit {
+    margin-top: 15px !important;
+    padding: 12px !important;
+    display: block;
+    margin: 15px auto 0 auto !important;
+}
+
+.hide {
+    display: none !important;
+}
+
 @media only screen and (max-width: 800px){
 
   body {
