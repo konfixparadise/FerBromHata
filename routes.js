@@ -18,6 +18,10 @@ router.post('/register', accounts.register)
 router.post('/authenticate', accounts.authenticate)
 router.get('/logout', accounts.logout)
 
+router.get('/admin', accounts.requireAdmin, (request, response) => {
+    response.send('Admin panel — coming soon!')
+})
+
 router.get('/error', (request, response) => response.status(404).end('Page not found!'))
 
 export default router

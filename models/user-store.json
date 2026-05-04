@@ -7,6 +7,14 @@
       "email": "admin@admin.com",
       "password": "admin",
       "isAdmin": true
+    },
+    {
+      "id": "2f68a801-c75a-40d2-b568-07ebcc771ba4",
+      "firstName": "check",
+      "lastName": "check",
+      "email": "check@check.check",
+      "password": "check",
+      "isAdmin": false
     }
   ]
 }

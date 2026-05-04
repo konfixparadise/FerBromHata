@@ -50,7 +50,18 @@ const accounts = {
         const userEmail = request.cookies.ferbromhata
         if (!userEmail) return null
         return userStore.getUserByEmail(userEmail)
+    },
+
+    requireAdmin(request, response, next) {
+        const loggedInUser = accounts.getCurrentUser(request)
+        if (loggedInUser && loggedInUser.isAdmin) {
+            next()
+        } else {
+            logger.info('Admin access denied')
+            response.redirect('/')
+        }
     }
+    
 }
 
 export default accounts
