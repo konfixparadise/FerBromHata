@@ -2,8 +2,12 @@
   "catalogCollection": [
     {
       "id": "01",
+      "userid": null,
       "title": "Dairy Automation Systems",
-      "photo": "/catalogPictures/dairy-automation.png",
+      "picture": {
+        "url": "/catalogPictures/dairy-automation.png",
+        "public_id": null
+      },
       "tags": [
         "Farm Solutions",
         "Smart Monitoring",
@@ -14,27 +18,40 @@
         {
           "id": "01",
           "title": "AutoMilk Collector",
-          "photo": "/productPictures/automilk-collector.png",
+          "picture": {
+            "url": "/productPictures/automilk-collector.png",
+            "public_id": null
+          },
           "description": "An automated milk collection system that gently and efficiently milks cows while tracking yield data."
         },
         {
           "id": "02",
           "title": "CowCam Tracker",
-          "photo": "/productPictures/cowcam-tracker.png",
+          "picture": {
+            "url": "/productPictures/cowcam-tracker.png",
+            "public_id": null
+          },
           "description": "A smart video surveillance system powered by AI to monitor cow health, condition, and movement in real-time."
         },
         {
           "id": "03",
           "title": "DairyClean Pro",
-          "photo": "/productPictures/dairyclean-pro.png",
+          "picture": {
+            "url": "/productPictures/dairyclean-pro.png",
+            "public_id": null
+          },
           "description": "An automated waste removal system that keeps barns hygienic, protecting animals from dangerous or unsanitary environments."
         }
       ]
     },
     {
       "id": "02",
+      "userid": null,
       "title": "Poultry Management",
-      "photo": "/catalogPictures/poultry-management.png",
+      "picture": {
+        "url": "/catalogPictures/poultry-management.png",
+        "public_id": null
+      },
       "tags": [
         "Farm Solutions",
         "Automated Labor",
@@ -45,27 +62,40 @@
         {
           "id": "04",
           "title": "EggGatherBot",
-          "photo": "/productPictures/egggatherbot.png",
+          "picture": {
+            "url": "/productPictures/egggatherbot.png",
+            "public_id": null
+          },
           "description": "A fully automated, gentle egg collection conveyor that drastically reduces manual labor."
         },
         {
           "id": "05",
           "title": "ShellShine Auto-Cleaner",
-          "photo": "/productPictures/shellshine-autocleaner.png",
+          "picture": {
+            "url": "/productPictures/shellshine-autocleaner.png",
+            "public_id": null
+          },
           "description": "An automated washing and sanitization unit integrated directly into the collection line."
         },
         {
           "id": "06",
           "title": "CluckFeeder Auto",
-          "photo": "/productPictures/cluckfeeder-auto.png",
+          "picture": {
+            "url": "/productPictures/cluckfeeder-auto.png",
+            "public_id": null
+          },
           "description": "A programmable, automated feeding and watering system that ensures precise nutrition for poultry flocks."
         }
       ]
     },
     {
       "id": "03",
+      "userid": null,
       "title": "General Livestock Care",
-      "photo": "/catalogPictures/livestock-care.png",
+      "picture": {
+        "url": "/catalogPictures/livestock-care.png",
+        "public_id": null
+      },
       "tags": [
         "Farm Solutions",
         "Livestock Welfare",
@@ -76,27 +106,40 @@
         {
           "id": "07",
           "title": "OmniFeeder System",
-          "photo": "/productPictures/omnifeeder-system.png",
+          "picture": {
+            "url": "/productPictures/omnifeeder-system.png",
+            "public_id": null
+          },
           "description": "Automated feeding stations that dispense customized feed mixes based on livestock needs."
         },
         {
           "id": "08",
           "title": "WasteAway Conveyor",
-          "photo": "/productPictures/wasteaway-conveyor.png",
+          "picture": {
+            "url": "/productPictures/wasteaway-conveyor.png",
+            "public_id": null
+          },
           "description": "A low-maintenance, automated animal waste cleaning system that integrates into existing barn structures."
         },
         {
           "id": "09",
           "title": "SafePen Upgrades",
-          "photo": "/productPictures/safepen-upgrades.png",
+          "picture": {
+            "url": "/productPictures/safepen-upgrades.png",
+            "public_id": null
+          },
           "description": "Animal-safe, structurally reinforced enclosure upgrades designed to prevent accidental harm and improve animal welfare."
         }
       ]
     },
     {
       "id": "04",
+      "userid": null,
       "title": "Crop Care & Agronomy",
-      "photo": "/catalogPictures/crop-care.png",
+      "picture": {
+        "url": "/catalogPictures/crop-care.png",
+        "public_id": null
+      },
       "tags": [
         "Fields Solutions",
         "Smart Monitoring",
@@ -107,27 +150,40 @@
         {
           "id": "10",
           "title": "AquaDrop Irrigator",
-          "photo": "/productPictures/aquadrop-irrigator.png",
+          "picture": {
+            "url": "/productPictures/aquadrop-irrigator.png",
+            "public_id": null
+          },
           "description": "An automated, green-energy-powered watering system that adjusts output based on real-time weather and soil data."
         },
         {
           "id": "11",
           "title": "SoilSense Probes",
-          "photo": "/productPictures/soilsense-probes.png",
+          "picture": {
+            "url": "/productPictures/soilsense-probes.png",
+            "public_id": null
+          },
           "description": "Deep-earth sensors that provide automated, real-time soil quality and moisture testing."
         },
         {
           "id": "12",
           "title": "PestShield Drone",
-          "photo": "/productPictures/pestshield-drone.png",
+          "picture": {
+            "url": "/productPictures/pestshield-drone.png",
+            "public_id": null
+          },
           "description": "An automated aerial pest control system that safely monitors and deters pests without heavy chemical reliance."
         }
       ]
     },
     {
       "id": "05",
+      "userid": null,
       "title": "Automated Harvesting",
-      "photo": "/catalogPictures/automated-harvesting.png",
+      "picture": {
+        "url": "/catalogPictures/automated-harvesting.png",
+        "public_id": null
+      },
       "tags": [
         "Fields Solutions",
         "Automated Labor",
@@ -138,27 +194,40 @@
         {
           "id": "13",
           "title": "AutoHarvester X1",
-          "photo": "/productPictures/autoharvester-x1.png",
+          "picture": {
+            "url": "/productPictures/autoharvester-x1.png",
+            "public_id": null
+          },
           "description": "A high-efficiency, automated combine system for rapid grain and staple crop harvesting."
         },
         {
           "id": "14",
           "title": "GentlePick Arm",
-          "photo": "/productPictures/gentlepick-arm.png",
+          "picture": {
+            "url": "/productPictures/gentlepick-arm.png",
+            "public_id": null
+          },
           "description": "A robotic arm attachment designed for the automated, bruise-free harvesting of delicate fruits and vegetables."
         },
         {
           "id": "15",
           "title": "CropSort Conveyor",
-          "photo": "/productPictures/cropsort-conveyor.png",
+          "picture": {
+            "url": "/productPictures/cropsort-conveyor.png",
+            "public_id": null
+          },
           "description": "An automated field-side sorting system that grades and cleans crops immediately after harvesting."
         }
       ]
     },
     {
       "id": "06",
+      "userid": null,
       "title": "Wind Energy Infrastructure",
-      "photo": "/catalogPictures/wind-energy.png",
+      "picture": {
+        "url": "/catalogPictures/wind-energy.png",
+        "public_id": null
+      },
       "tags": [
         "Farm Solutions",
         "Fields Solutions",
@@ -169,27 +238,40 @@
         {
           "id": "16",
           "title": "AeroFarm Turbine",
-          "photo": "/productPictures/aerofarm-turbine.png",
+          "picture": {
+            "url": "/productPictures/aerofarm-turbine.png",
+            "public_id": null
+          },
           "description": "A highly efficient wind turbine specifically scaled and designed to power farmstead operations."
         },
         {
           "id": "17",
           "title": "BreezeStore Battery Hub",
-          "photo": "/productPictures/breezestore-battery.png",
+          "picture": {
+            "url": "/productPictures/breezestore-battery.png",
+            "public_id": null
+          },
           "description": "High-capacity energy storage units to bank wind power for uninterrupted automated farming."
         },
         {
           "id": "18",
           "title": "WindSync Controller",
-          "photo": "/productPictures/windsync-controller.png",
+          "picture": {
+            "url": "/productPictures/windsync-controller.png",
+            "public_id": null
+          },
           "description": "A smart grid management tool that distributes wind energy directly to active automated machinery."
         }
       ]
     },
     {
       "id": "07",
+      "userid": null,
       "title": "Solar Power Systems",
-      "photo": "/catalogPictures/solar-power.png",
+      "picture": {
+        "url": "/catalogPictures/solar-power.png",
+        "public_id": null
+      },
       "tags": [
         "Fields Solutions",
         "Farm Solutions",
@@ -200,27 +282,40 @@
         {
           "id": "19",
           "title": "SunField Panels",
-          "photo": "/productPictures/sunfield-panels.png",
+          "picture": {
+            "url": "/productPictures/sunfield-panels.png",
+            "public_id": null
+          },
           "description": "Durable, weather-resistant solar panels optimized for agricultural environments and field installations."
         },
         {
           "id": "20",
           "title": "SolarTrak Mounts",
-          "photo": "/productPictures/solartrak-mounts.png",
+          "picture": {
+            "url": "/productPictures/solartrak-mounts.png",
+            "public_id": null
+          },
           "description": "Automated mounts that follow the sun's trajectory to maximize energy capture for field operations."
         },
         {
           "id": "21",
           "title": "FieldCharge Station",
-          "photo": "/productPictures/fieldcharge-station.png",
+          "picture": {
+            "url": "/productPictures/fieldcharge-station.png",
+            "public_id": null
+          },
           "description": "Solar-powered docking hubs where automated rovers and drones can recharge without returning to the main farmstead."
         }
       ]
     },
     {
       "id": "08",
+      "userid": null,
       "title": "Control Software Subscriptions",
-      "photo": "/catalogPictures/software-subscriptions.png",
+      "picture": {
+        "url": "/catalogPictures/software-subscriptions.png",
+        "public_id": null
+      },
       "tags": [
         "Farm Solutions",
         "Infrastructure",
@@ -231,27 +326,40 @@
         {
           "id": "22",
           "title": "FerBrom OS - Basic Rate",
-          "photo": "/productPictures/ferbrom-os-basic.png",
+          "picture": {
+            "url": "/productPictures/ferbrom-os-basic.png",
+            "public_id": null
+          },
           "description": "An entry-level subscription for managing single-system automation (e.g., just poultry or just irrigation)."
         },
         {
           "id": "23",
           "title": "FerBrom OS - Advanced Rate",
-          "photo": "/productPictures/ferbrom-os-advanced.png",
+          "picture": {
+            "url": "/productPictures/ferbrom-os-advanced.png",
+            "public_id": null
+          },
           "description": "A comprehensive control system for managing multi-faceted farm automation with real-time video and data analytics."
         },
         {
           "id": "24",
           "title": "FerBrom OS - Enterprise Rate",
-          "photo": "/productPictures/ferbrom-os-enterprise.png",
+          "picture": {
+            "url": "/productPictures/ferbrom-os-enterprise.png",
+            "public_id": null
+          },
           "description": "Full-scale software for large or multi-location farms, featuring international market compliance and advanced remote control."
         }
       ]
     },
     {
       "id": "09",
+      "userid": null,
       "title": "Structural Farm Upgrades",
-      "photo": "/catalogPictures/structural-upgrades.png",
+      "picture": {
+        "url": "/catalogPictures/structural-upgrades.png",
+        "public_id": null
+      },
       "tags": [
         "Farm Solutions",
         "Infrastructure",
@@ -262,27 +370,40 @@
         {
           "id": "25",
           "title": "RetroFit Trusses",
-          "photo": "/productPictures/retrofit-trusses.png",
+          "picture": {
+            "url": "/productPictures/retrofit-trusses.png",
+            "public_id": null
+          },
           "description": "Modernized, heavy-duty trusses designed to support new automated equipment while fitting into existing agricultural machinery and barns."
         },
         {
           "id": "26",
           "title": "EcoInsulate Panels",
-          "photo": "/productPictures/ecoinsulate-panels.png",
+          "picture": {
+            "url": "/productPictures/ecoinsulate-panels.png",
+            "public_id": null
+          },
           "description": "Easy-to-install structural panels that upgrade the thermal efficiency of older farm buildings to green era standards."
         },
         {
           "id": "27",
           "title": "SmartVent System",
-          "photo": "/productPictures/smartvent-system.png",
+          "picture": {
+            "url": "/productPictures/smartvent-system.png",
+            "public_id": null
+          },
           "description": "An automated climate control ventilation system easily retrofitted into traditional livestock housing."
         }
       ]
     },
     {
       "id": "10",
+      "userid": null,
       "title": "Experimental UCD Robotics",
-      "photo": "/catalogPictures/ucd-robotics.png",
+      "picture": {
+        "url": "/catalogPictures/ucd-robotics.png",
+        "public_id": null
+      },
       "tags": [
         "Fields Solutions",
         "Automated Labor",
@@ -293,19 +414,28 @@
         {
           "id": "28",
           "title": "UCD-Rover Beta",
-          "photo": "/productPictures/ucd-rover-beta.png",
+          "picture": {
+            "url": "/productPictures/ucd-rover-beta.png",
+            "public_id": null
+          },
           "description": "An experimental, machine-learning-driven field rover that scouts crops and adapts to new terrain."
         },
         {
           "id": "29",
           "title": "EduBot Harvester",
-          "photo": "/productPictures/edubot-harvester.png",
+          "picture": {
+            "url": "/productPictures/edubot-harvester.png",
+            "public_id": null
+          },
           "description": "An academic prototype harvesting arm that uses advanced vision to learn and identify different crop ripeness levels."
         },
         {
           "id": "30",
           "title": "GreenGrid Simulator",
-          "photo": "/productPictures/greengrid-simulator.png",
+          "picture": {
+            "url": "/productPictures/greengrid-simulator.png",
+            "public_id": null
+          },
           "description": "An advanced software planning tool that helps farms simulate the most efficient layout for wind and solar integration before installation."
         }
       ]

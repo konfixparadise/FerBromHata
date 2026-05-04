@@ -116,14 +116,33 @@ body {
   border-radius: 4px;
 }
 
-#contact.item {
-  border: 2px solid white;
-  border-radius: 150px;
-  margin-left: 20px;
-  padding: 8px 30px;
-  font-size: 1.2em;
-  align-self: center;
-  line-height: 2 !important;
+.login_btn {
+    border: 2px solid white;
+    border-radius: 150px;
+    margin-left: 20px;
+    padding: 8px 30px !important;
+    font-size: 1.2em;
+    align-self: center;
+    line-height: 2 !important;
+    color: white !important;
+}
+
+.user_name {
+    color: #00DC75 !important;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+.user_name .icon {
+    margin-right: 5px;
+}
+
+.admin_link {
+    color: #00DC75 !important;
+}
+
+.admin_link .icon {
+    margin-right: 4px;
 }
 
 .custom_footer {
@@ -270,7 +289,7 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 
-  #contact.item:hover {
+  .login_btn:hover {
   border-color: transparent;
   background-color: #083027;
   }
@@ -282,7 +301,7 @@ body {
 }
 
 .btns:active,
-#contact.item:active {
+.login_btn:active {
   background-color: #083027;
   color: white;
   transform: scale(0.95);
@@ -511,7 +530,7 @@ body {
     display: flex !important;
   }
 
-  #contact.item {
+  .login_btn {
     margin: 15px auto !important;
     width: 80% !important;
   }

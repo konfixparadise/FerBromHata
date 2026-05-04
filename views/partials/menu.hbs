@@ -14,12 +14,25 @@
             <i class="dropdown icon"></i>
             <div class="menu">
                 <a class="item" href="/catalog?category=Farm+Solutions"> Farm Solutions </a>
-                <a class="item" href="catalog?category=Fields+Solutions"> Fields Solutions </a>
+                <a class="item" href="/catalog?category=Fields+Solutions"> Fields Solutions </a>
                 <a class="item" href="/catalog"> Other </a>
             </div>
         </div>
         <a id="about" class="item" href="/about"> About </a>
-        <a id="contact" class="item" href="#footerlink"> Contact Us</a>
+        <a id="contact" class="item" href="#footerlink"> Contact Us </a>
+        {{#if isAdmin}}
+            <a id="admin" class="item admin_link" href="/admin"> 
+                <i class="cogs icon"></i> Admin Panel 
+            </a>
+        {{/if}}
+        {{#if loggedInUser}}
+            <span class="item user_name">
+                <i class="user circle icon"></i> {{fullname}}
+            </span>
+            <a id="logout" class="login_btn" href="/logout"> Logout </a>
+        {{else}}
+            <a id="login" class="login_btn" href="/login"> Login </a>
+        {{/if}}
     </div>
 </nav>
 
@@ -67,7 +80,7 @@
                 if (window.innerWidth > 800) {
                     window.location.href = '/catalog'
                 } else {
-                    e.stopPropagation();
+                    e.stopPropagation()
                 }
             })
             catalogLink.addEventListener('click', function(e) {
@@ -77,30 +90,29 @@
                 }
             })
         }
-        if(contactLink) {
+        if (contactLink) {
             contactLink.addEventListener('click', function () {
                 setTimeout(() => {
-                    window.history.replaceState({}, document.title, window.location.pathname
-                )}, 0)
+                    window.history.replaceState({}, document.title, window.location.pathname)
+                }, 0)
             })
         }
 
         var rawId = "{{id}}"
-        var pageId = (rawId === "/" || rawId === "") ? "home" : rawId.replace("/", "") 
-        
+        var pageId = (rawId === "/" || rawId === "") ? "home" : rawId.replace("/", "")
+
         if (pageId === "catalog") { 
-            pageId = "catalog_box"; 
+            pageId = "catalog_box"
             const icon = document.querySelector('#catalog_box .dropdown.icon')
             if (icon) icon.style.display = 'none'
         }
 
         var element = document.getElementById(pageId)
         if (element) element.classList.add('active')
-    }) 
+    })
 
     window.addEventListener('scroll', function () {
         const menu = document.querySelector('.ui.menu')
-
         if (window.scrollY > 10) {
             menu.classList.add('scrolled')
         } else {
