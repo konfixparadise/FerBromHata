@@ -1,4 +1,4 @@
-<form class="ui form admin_add_form" action="/admin/catalogs/add" method="POST">
+<form class="ui form admin_add_form" action="/admin/catalogs/add" method="POST" enctype="multipart/form-data">
     <div class="field">
         <label> Title </label>
         <input type="text" name="title" placeholder="e.g. Smart Irrigation" required>
@@ -10,6 +10,10 @@
     <div class="field">
         <label> Description </label>
         <textarea name="description" rows="3" placeholder="What this catalog is about..." required></textarea>
+    </div>
+    <div class="field">
+        <label> Cover image </label>
+        <input type="file" name="picture" accept="image/*">
     </div>
     <button type="submit" class="ui fluid btns"> Add catalog </button>
 </form>

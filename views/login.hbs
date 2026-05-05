@@ -22,7 +22,7 @@
                     <button type="submit" class="ui fluid btns login_submit"> Log In </button>
                 </form>
 
-                <form id="registerForm" class="ui form hide" action="/register" method="POST">
+                <form id="registerForm" class="ui form hide" action="/register" method="POST" enctype="multipart/form-data">
                     <h3 class="ui header login_header"> Create your FerBromHata account </h3>
                     <div class="two fields">
                         <div class="field">
@@ -41,6 +41,10 @@
                     <div class="field">
                         <label> Password </label>
                         <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="field">
+                        <label> Profile picture (optional) </label>
+                        <input type="file" name="profilePic" accept="image/*">
                     </div>
                     <button type="submit" class="ui fluid btns login_submit"> Register </button>
                 </form>

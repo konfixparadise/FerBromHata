@@ -1,5 +1,5 @@
 <form id="catalogEdit{{index}}" class="ui form admin_catalog_edit hide" 
-      action="/admin/catalogs/update/{{id}}" method="POST">
+      action="/admin/catalogs/update/{{id}}" method="POST" enctype="multipart/form-data">
     <div class="field">
         <label> Title </label>
         <input type="text" name="title" value="{{title}}" required>
@@ -11,6 +11,10 @@
     <div class="field">
         <label> Description </label>
         <textarea name="description" rows="3" required>{{description}}</textarea>
+    </div>
+    <div class="field">
+        <label> Replace cover image (optional) </label>
+        <input type="file" name="picture" accept="image/*">
     </div>
     <div class="admin_form_actions">
         <button id="hideEdit{{index}}" type="button" class="ui basic button"> Cancel </button>

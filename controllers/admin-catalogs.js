@@ -71,7 +71,8 @@ const adminCatalogs = {
             products: []
         }
 
-        await catalogStore.addCatalog(newCatalog)
+        const file = request.files ? request.files.picture : null
+        await catalogStore.addCatalog(newCatalog, file)
         response.redirect('/admin/catalogs')
     },
 
@@ -100,7 +101,8 @@ const adminCatalogs = {
             products: existing.products
         }
 
-        await catalogStore.editCatalog(catalogId, updated)
+        const file = request.files ? request.files.picture : null
+        await catalogStore.editCatalog(catalogId, updated, file)
         response.redirect('/admin/catalogs')
     },
 
@@ -137,7 +139,8 @@ const adminCatalogs = {
             description: request.body.description
         }
 
-        await catalogStore.addProduct(catalogId, newProduct)
+        const file = request.files ? request.files.picture : null
+        await catalogStore.addProduct(catalogId, newProduct, file)
         response.redirect('/admin/catalogs/' + catalogId)
     },
 
@@ -164,7 +167,8 @@ const adminCatalogs = {
             description: request.body.description
         }
 
-        await catalogStore.editProduct(catalogId, productId, updated)
+        const file = request.files ? request.files.picture : null
+        await catalogStore.editProduct(catalogId, productId, updated, file)
         response.redirect('/admin/catalogs/' + catalogId)
     }
 }
