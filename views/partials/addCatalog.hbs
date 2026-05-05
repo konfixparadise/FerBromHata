@@ -1,0 +1,15 @@
+<form class="ui form admin_add_form" action="/admin/catalogs/add" method="POST">
+    <div class="field">
+        <label> Title </label>
+        <input type="text" name="title" placeholder="e.g. Smart Irrigation" required>
+    </div>
+    <div class="field">
+        <label> Tags (comma-separated) </label>
+        <input type="text" name="tags" placeholder="Farm Solutions, Smart Monitoring">
+    </div>
+    <div class="field">
+        <label> Description </label>
+        <textarea name="description" rows="3" placeholder="What this catalog is about..." required></textarea>
+    </div>
+    <button type="submit" class="ui fluid btns"> Add catalog </button>
+</form>

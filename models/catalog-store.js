@@ -21,6 +21,21 @@ const catalogStore = {
     
     getCatalogById(id) {
         return  this.store.findOneBy(this.collection, (catalog) => catalog.id === id)
+    },
+
+    async addCatalog(catalog) {
+        await this.store.addCollection(this.collection, catalog)
+    },
+
+    async removeCatalogById(id) {
+        const catalog = this.getCatalogById(id)
+        if (catalog) {
+            await this.store.removeCollection(this.collection, catalog)
+        }
+    },
+
+    async editCatalog(id, updated) {
+        await this.store.editCollection(this.collection, id, updated)
     }
 }
 

@@ -646,6 +646,150 @@ body {
     color: #525655 !important;
 }
 
+.admin_section_header {
+    color: #004C40 !important;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 30px 0 15px 0 !important;
+    border-bottom: 2px solid #00DC75;
+    padding-bottom: 8px !important;
+}
+
+.admin_catalogs_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.admin_catalog_row {
+    display: flex;
+    background-color: white;
+    border: 1px solid #d0d8d3;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.admin_catalog_info {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    align-items: center;
+}
+
+.catalog_thumb {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.catalog_thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catalog_text {
+    flex: 1;
+}
+
+.admin_catalog_title {
+    color: #004C40 !important;
+    margin: 0 0 8px 0 !important;
+    text-align: left !important;
+    padding: 0 !important;
+}
+
+.admin_catalog_desc {
+    color: #525655 !important;
+    margin: 8px 0 4px 0 !important;
+    text-align: left !important;
+    padding: 0 !important;
+    font-size: 0.95em;
+}
+
+.admin_catalog_meta {
+    color: #6c8077 !important;
+    margin: 0 !important;
+    text-align: left !important;
+    padding: 0 !important;
+    font-size: 0.85em;
+}
+
+.admin_catalog_actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.admin_btn {
+    border: none;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.admin_btn .icon {
+    margin: 0 !important;
+    font-size: 1.1em;
+}
+
+.admin_btn_edit {
+    background-color: #004C40;
+    color: white;
+}
+
+.admin_btn_edit:hover {
+    background-color: #00DC75;
+}
+
+.admin_btn_delete {
+    background-color: #B33A3A;
+    color: white;
+}
+
+.admin_btn_delete:hover {
+    background-color: #d44;
+}
+
+.admin_catalog_edit {
+    background-color: white;
+    border: 1px solid #00DC75;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.admin_catalog_edit .field label,
+.admin_add_form .field label {
+    color: #004C40 !important;
+}
+
+.admin_form_actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.admin_add_form {
+    background-color: white;
+    border: 1px solid #d0d8d3;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 800px){
 
   body {

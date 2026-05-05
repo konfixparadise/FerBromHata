@@ -1,0 +1,30 @@
+<form id="catalogEdit{{index}}" class="ui form admin_catalog_edit hide" 
+      action="/admin/catalogs/update/{{id}}" method="POST">
+    <div class="field">
+        <label> Title </label>
+        <input type="text" name="title" value="{{title}}" required>
+    </div>
+    <div class="field">
+        <label> Tags (comma-separated) </label>
+        <input type="text" name="tags" value="{{#each tags}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}">
+    </div>
+    <div class="field">
+        <label> Description </label>
+        <textarea name="description" rows="3" required>{{description}}</textarea>
+    </div>
+    <div class="admin_form_actions">
+        <button id="hideEdit{{index}}" type="button" class="ui basic button"> Cancel </button>
+        <button type="submit" class="ui btns"> Save changes </button>
+    </div>
+</form>
+
+<script>
+    document.getElementById('showEdit{{index}}').addEventListener('click', function() {
+        document.getElementById('catalogRow{{index}}').style.display = 'none'
+        document.getElementById('catalogEdit{{index}}').classList.remove('hide')
+    })
+    document.getElementById('hideEdit{{index}}').addEventListener('click', function() {
+        document.getElementById('catalogEdit{{index}}').classList.add('hide')
+        document.getElementById('catalogRow{{index}}').style.display = ''
+    })
+</script>
