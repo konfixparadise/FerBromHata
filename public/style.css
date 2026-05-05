@@ -875,6 +875,91 @@ body {
     color: white !important;
 }
 
+.stats_section {
+    padding: 30px 5% !important;
+    background-color: #EBFFF5 !important;
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+}
+
+.stats_heading {
+    text-align: center !important;
+    color: #004C40 !important;
+    margin-bottom: 25px !important;
+    padding: 0 !important;
+}
+
+.centered_stats {
+    justify-content: center !important;
+    margin: 0 auto !important;
+}
+
+.stat_card {
+    margin: 10px 20px !important;
+}
+
+.stat_card .value {
+    color: #004C40 !important;
+}
+
+.stat_card .label {
+    color: #6c8077 !important;
+    font-weight: bold !important;
+}
+
+.stat_icon {
+    color: #00DC75 !important;
+}
+
+.stats_minmax {
+    margin: 30px auto !important;
+    justify-content: center !important;
+}
+
+.stat_minmax_card {
+    border-radius: 10px !important;
+    border: 1px solid #d0d8d3 !important;
+}
+
+.stat_minmax_card .header {
+    color: #004C40 !important;
+}
+
+.stat_minmax_card .meta {
+    color: #525655 !important;
+    margin-top: 8px !important;
+}
+
+.stat_minmax_icon {
+    color: #00DC75 !important;
+    font-size: 2em !important;
+    margin-bottom: 10px !important;
+}
+
+.stat_min_icon {
+    color: #B33A3A !important;
+}
+
+.user_stats_header {
+    margin-top: 50px !important;
+}
+
+.user_stats_empty {
+    text-align: center !important;
+    color: #6c8077 !important;
+    font-style: italic;
+    padding: 20px !important;
+}
+
+.ferbrom_header_wrap {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.stats_divider {
+    margin: 50px 0 40px 0 !important;
+}
+
 @media only screen and (max-width: 800px){
 
   body {

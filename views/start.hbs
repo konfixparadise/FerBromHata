@@ -1,6 +1,35 @@
 {{> menu}}
 
 <section class="ui left aligned middle aligned segment">
+  <section class="ui segment stats_section">
+      <h2 class="stats_heading"> FerBromHata at a glance </h2>
+      <div class="ui four stackable statistics centered_stats">
+          <div class="ui statistic stat_card">
+              <div class="value">
+                  <i class="boxes icon stat_icon"></i>
+              </div>
+              <div class="label"> {{appStats.numCatalogs}} CATALOGS </div>
+          </div>
+          <div class="ui statistic stat_card">
+              <div class="value">
+                  <i class="cubes icon stat_icon"></i>
+              </div>
+              <div class="label"> {{appStats.numProducts}} PRODUCTS </div>
+          </div>
+          <div class="ui statistic stat_card">
+              <div class="value">
+                  <i class="users icon stat_icon"></i>
+              </div>
+              <div class="label"> {{appStats.numUsers}} USERS </div>
+          </div>
+          <div class="ui statistic stat_card">
+              <div class="value">
+                  <i class="chart bar icon stat_icon"></i>
+              </div>
+              <div class="label"> AVG {{appStats.avgProducts}} PRODUCTS / CATALOG </div>
+          </div>
+      </div>
+  </section>
   <div id="textPhoto">
     <div id="whiteText"><h2>{{title}}</h2></div>
     <div id="titleImg"><img src="/photos/textPhoto_FerBromHata.png"></div>

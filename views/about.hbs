@@ -12,7 +12,6 @@
             <div class="img_ferbrom">
                 <img src="/about.png">
             </div>
-
             <div class="img_ferbrom">
                 <iframe 
                     width="100%"
@@ -28,5 +27,91 @@
             </div>
         </div>
     </div>
+
+    <div class="ui divider stats_divider"></div>
+
+    <div class="ferbrom_header_wrap">
+        <h2 class="ui header ferbrom_header"> App Statistics </h2>
+    </div>
+
+    <div class="ui four stackable statistics centered_stats">
+        <div class="ui statistic stat_card">
+            <div class="value"> {{appStats.numCatalogs}} </div>
+            <div class="label"> Catalogs </div>
+        </div>
+        <div class="ui statistic stat_card">
+            <div class="value"> {{appStats.numProducts}} </div>
+            <div class="label"> Products </div>
+        </div>
+        <div class="ui statistic stat_card">
+            <div class="value"> {{appStats.numUsers}} </div>
+            <div class="label"> Users </div>
+        </div>
+        <div class="ui statistic stat_card">
+            <div class="value"> {{appStats.avgProducts}} </div>
+            <div class="label"> Avg products / catalog </div>
+        </div>
+    </div>
+
+    <div class="ui two stackable cards stats_minmax">
+        <div class="ui card stat_minmax_card">
+            <div class="content">
+                <i class="arrow up icon stat_minmax_icon"></i>
+                <div class="header"> Most products: {{appStats.mostProductsCount}} </div>
+                <div class="meta"> {{appStats.mostProductsTitle}} </div>
+            </div>
+        </div>
+        <div class="ui card stat_minmax_card">
+            <div class="content">
+                <i class="arrow down icon stat_minmax_icon stat_min_icon"></i>
+                <div class="header"> Least products: {{appStats.leastProductsCount}} </div>
+                <div class="meta"> {{appStats.leastProductsTitle}} </div>
+            </div>
+        </div>
+    </div>
+
+    {{#if userStats}}
+        <div class="ferbrom_header_wrap user_stats_header">
+            <h2 class="ui header ferbrom_header"> {{fullname}}'s Statistics </h2>
+        </div>
+
+        <div class="ui three stackable statistics centered_stats">
+            <div class="ui statistic stat_card">
+                <div class="value"> {{userStats.numCatalogs}} </div>
+                <div class="label"> Your catalogs </div>
+            </div>
+            <div class="ui statistic stat_card">
+                <div class="value"> {{userStats.numProducts}} </div>
+                <div class="label"> Your products </div>
+            </div>
+            <div class="ui statistic stat_card">
+                <div class="value"> {{userStats.avgProducts}} </div>
+                <div class="label"> Avg products / catalog </div>
+            </div>
+        </div>
+
+        {{#if userStats.numCatalogs}}
+            <div class="ui two stackable cards stats_minmax">
+                <div class="ui card stat_minmax_card">
+                    <div class="content">
+                        <i class="arrow up icon stat_minmax_icon"></i>
+                        <div class="header"> Your most products: {{userStats.mostProductsCount}} </div>
+                        <div class="meta"> {{userStats.mostProductsTitle}} </div>
+                    </div>
+                </div>
+                <div class="ui card stat_minmax_card">
+                    <div class="content">
+                        <i class="arrow down icon stat_minmax_icon stat_min_icon"></i>
+                        <div class="header"> Your least products: {{userStats.leastProductsCount}} </div>
+                        <div class="meta"> {{userStats.leastProductsTitle}} </div>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <p class="user_stats_empty">
+                You haven't added any catalogs yet. {{#if isAdmin}}Visit the Admin Panel to start.{{else}}Only admins can add catalogs.{{/if}}
+            </p>
+        {{/if}}
+    {{/if}}
 </section>
 {{> footer}}
