@@ -6,15 +6,23 @@
       "lastName": "User",
       "email": "admin@admin.com",
       "password": "admin",
-      "isAdmin": true
+      "isAdmin": true,
+      "picture": {
+        "url": "/photos/default_avatar.png",
+        "public_id": null
+      }
     },
     {
-      "id": "2f68a801-c75a-40d2-b568-07ebcc771ba4",
-      "firstName": "check",
-      "lastName": "check",
-      "email": "check@check.check",
-      "password": "check",
-      "isAdmin": false
+      "id": "d4aac6a6-c992-4ea1-b0c1-b4ac4ad811e1",
+      "firstName": "test",
+      "lastName": "test",
+      "email": "test@test.test",
+      "password": "test",
+      "isAdmin": false,
+      "picture": {
+        "url": "https://res.cloudinary.com/dp7fqaibw/image/upload/v1777944410/cffua3gtvn3e9cqaasol.png",
+        "public_id": "cffua3gtvn3e9cqaasol"
+      }
     }
   ]
 }

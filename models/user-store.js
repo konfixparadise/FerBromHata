@@ -19,7 +19,14 @@ const userStore = {
         return this.store.findOneBy(this.collection, (user) => user.email === email)
     },
 
-    async addUser(user) {
+    async addUser(user, file) {
+        if (file) {
+            try {
+                user.picture = await this.store.addToCloudinary(file)
+            } catch (err) {
+                logger.error('Profile picture upload failed: ' + err)
+            }
+        }
         await this.store.addCollection(this.collection, user)
     }
 }

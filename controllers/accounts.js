@@ -13,7 +13,11 @@ const accounts = {
             lastName: request.body.lastName,
             email: request.body.email,
             password: request.body.password,
-            isAdmin: false
+            isAdmin: false,
+            picture: {
+                url: '/photos/default_avatar.png',
+                public_id: null
+            }
         }
 
         const existing = userStore.getUserByEmail(newUser.email)
@@ -22,7 +26,8 @@ const accounts = {
             return response.redirect('/login')
         }
 
-        await userStore.addUser(newUser)
+        const file = request.files ? request.files.profilePic : null
+        await userStore.addUser(newUser, file)
         logger.info(`Registered new user: ${newUser.email}`)
         response.cookie('ferbromhata', newUser.email)
         response.redirect('/')

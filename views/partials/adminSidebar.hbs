@@ -1,0 +1,32 @@
+<aside class="admin_sidebar">
+    <div class="admin_sidebar_header">
+        <i class="cogs icon"></i>
+        <h3> FerBromHata Studio </h3>
+    </div>
+    <nav class="admin_sidebar_nav">
+        <a id="adminDashboard" class="admin_sidebar_item" href="/admin">
+            <i class="th icon"></i>
+            <span> Dashboard </span>
+        </a>
+        <a id="adminCatalogs" class="admin_sidebar_item" href="/admin/catalogs">
+            <i class="boxes icon"></i>
+            <span> Catalogs </span>
+        </a>
+        <a id="adminUsers" class="admin_sidebar_item" href="/admin/users">
+            <i class="users icon"></i>
+            <span> Users </span>
+        </a>
+        <a id="adminSettings" class="admin_sidebar_item" href="/admin/settings">
+            <i class="setting icon"></i>
+            <span> Settings </span>
+        </a>
+    </nav>
+</aside>
+
+<script>
+    var section = "{{adminSection}}"
+    if (section) {
+        var el = document.getElementById('admin' + section)
+        if (el) el.classList.add('active')
+    }
+</script>

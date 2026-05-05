@@ -1,0 +1,49 @@
+{{> menu id="admin"}}
+
+<section class="ui segment admin_segment">
+    <div class="admin_layout">
+        {{> adminSidebar}}
+        <main class="admin_main">
+            <header class="admin_main_header">
+                <h2> Manage Catalogs </h2>
+                <p class="admin_subtitle">
+                    Edit, remove, or add catalogs. Existing company catalogs have no owner.
+                </p>
+            </header>
+
+            <form action="/admin/catalogs" method="GET" class="ui form admin_search_sort">
+                <div class="field admin_search_input">
+                    <input type="text" name="searchTerm" placeholder="Search by title..." value="{{searchTerm}}">
+                </div>
+                <div class="field">
+                    <label> Sort by </label>
+                    <select name="sort" onchange="this.form.submit()" class="admin_select">
+                        <option value=""> — </option>
+                        <option value="title" {{#if titleSelected}}selected{{/if}}> Title </option>
+                        <option value="products" {{#if productsSelected}}selected{{/if}}> Products count </option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label> Order </label>
+                    <select name="order" onchange="this.form.submit()" class="admin_select">
+                        <option value="asc" {{#if ascSelected}}selected{{/if}}> Ascending ↑ </option>
+                        <option value="desc" {{#if descSelected}}selected{{/if}}> Descending ↓ </option>
+                    </select>
+                </div>
+                <button type="submit" class="ui btns admin_search_btn"> Apply </button>
+                <a href="/admin/catalogs" class="ui basic button admin_clear_btn"> Clear </a>
+            </form>
+
+            <div class="admin_section_header"> Add a new catalog </div>
+            {{> addCatalog}}
+
+            <div class="admin_section_header"> All catalogs ({{catalogs.length}}) </div>
+            <div class="admin_catalogs_list">
+                {{#each catalogs}}
+                    {{> listOneCatalog index=@index}}
+                    {{> editCatalog index=@index}}
+                {{/each}}
+            </div>
+        </main>
+    </div>
+</section>

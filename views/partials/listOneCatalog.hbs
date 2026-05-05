@@ -1,0 +1,36 @@
+<div id="catalogRow{{index}}" class="admin_catalog_row">
+    <div class="admin_catalog_info">
+        <div class="catalog_thumb">
+            <img src="{{picture.url}}" alt="{{title}}">
+        </div>
+        <div class="catalog_text">
+            <h3 class="admin_catalog_title"> {{title}} </h3>
+            <div class="tag_container">
+                {{#each tags}}
+                    <span class="ui basic label catalog_tag"> {{this}} </span>
+                {{/each}}
+            </div>
+            <p class="admin_catalog_desc"> {{description}} </p>
+            <p class="admin_catalog_meta">
+                <i class="cubes icon"></i> {{products.length}} products
+                {{#if userid}}
+                    &nbsp;|&nbsp; <i class="user icon"></i> Admin-added
+                {{else}}
+                    &nbsp;|&nbsp; <i class="building icon"></i> Company
+                {{/if}}
+            </p>
+        </div>
+    </div>
+    <div class="admin_catalog_actions">
+        <a class="admin_btn admin_btn_open" href="/admin/catalogs/{{id}}" title="Manage products">
+            <i class="folder open icon"></i>
+        </a>
+        <button id="showEdit{{index}}" type="button" class="admin_btn admin_btn_edit" title="Edit catalog">
+            <i class="pencil icon"></i>
+        </button>
+        <a class="admin_btn admin_btn_delete" href="/admin/catalogs/delete/{{id}}" title="Delete catalog"
+        onclick="return confirm('Delete this catalog and all its products?')">
+            <i class="trash icon"></i>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+{{> menu id="admin"}}
+
+<section class="ui segment admin_segment">
+    <div class="admin_layout">
+        {{> adminSidebar}}
+        <main class="admin_main">
+            <header class="admin_main_header">
+                <h2> Welcome, {{fullname}} </h2>
+                <p class="admin_subtitle">
+                    FerBromHata Studio — manage catalogs, products, and users from one place.
+                </p>
+            </header>
+
+            <div class="ui three stackable cards admin_overview">
+                <a class="ui card admin_overview_card" href="/admin/catalogs">
+                    <div class="content">
+                        <i class="huge boxes icon admin_overview_icon"></i>
+                        <div class="header"> Catalogs </div>
+                        <div class="meta admin_overview_meta">
+                            Manage company catalogs and products
+                        </div>
+                    </div>
+                </a>
+                <a class="ui card admin_overview_card" href="/admin/users">
+                    <div class="content">
+                        <i class="huge users icon admin_overview_icon"></i>
+                        <div class="header"> Users </div>
+                        <div class="meta admin_overview_meta">
+                            View and create user accounts
+                        </div>
+                    </div>
+                </a>
+                <a class="ui card admin_overview_card" href="/admin/settings">
+                    <div class="content">
+                        <i class="huge setting icon admin_overview_icon"></i>
+                        <div class="header"> Settings </div>
+                        <div class="meta admin_overview_meta">
+                            Application configuration
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+</section>
