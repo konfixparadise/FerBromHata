@@ -11,13 +11,41 @@ const adminCatalogs = {
         logger.info('Admin catalogs page loading!')
         const loggedInUser = accounts.getCurrentUser(request)
 
+        const searchTerm = request.query.searchTerm || ''
+        const sortField = request.query.sort
+        const order = request.query.order === 'desc' ? -1 : 1
+
+        let catalogs = catalogStore.getAllCatalogs()
+
+        if (searchTerm) {
+            const lower = searchTerm.toLowerCase()
+            catalogs = catalogs.filter(c => c.title.toLowerCase().includes(lower))
+        }
+
+        if (sortField) {
+            catalogs = catalogs.slice().sort((a, b) => {
+                if (sortField === 'title') {
+                    return a.title.localeCompare(b.title) * order
+                }
+                if (sortField === 'products') {
+                    return (a.products.length - b.products.length) * order
+                }
+                return 0
+            })
+        }
+
         const viewData = {
             title: 'Manage Catalogs',
             loggedInUser: loggedInUser,
             isAdmin: loggedInUser && loggedInUser.isAdmin,
             fullname: loggedInUser ? loggedInUser.firstName + ' ' + loggedInUser.lastName : '',
             adminSection: 'Catalogs',
-            catalogs: catalogStore.getAllCatalogs()
+            catalogs: catalogs,
+            searchTerm: searchTerm,
+            titleSelected: sortField === 'title',
+            productsSelected: sortField === 'products',
+            ascSelected: request.query.order === 'asc',
+            descSelected: request.query.order === 'desc'
         }
 
         response.render('admin-catalogs', viewData)
