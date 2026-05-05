@@ -1,0 +1,30 @@
+{{> menu id="admin"}}
+
+<section class="ui segment admin_segment">
+    <div class="admin_layout">
+        {{> adminSidebar}}
+        <main class="admin_main">
+            <div class="admin_back_link">
+                <a href="/admin/catalogs">
+                    <i class="left chevron icon"></i> Back to all catalogs
+                </a>
+            </div>
+
+            <header class="admin_main_header">
+                <h2> {{catalog.title}} </h2>
+                <p class="admin_subtitle"> {{catalog.description}} </p>
+            </header>
+
+            <div class="admin_section_header"> Add a new product </div>
+            {{> addProduct}}
+
+            <div class="admin_section_header"> Products ({{catalog.products.length}}) </div>
+            <div class="admin_catalogs_list">
+                {{#each catalog.products}}
+                    {{> listOneProduct catalogId=../catalog.id index=@index}}
+                    {{> editProduct catalogId=../catalog.id index=@index}}
+                {{/each}}
+            </div>
+        </main>
+    </div>
+</section>

@@ -22,11 +22,14 @@
         </div>
     </div>
     <div class="admin_catalog_actions">
+        <a class="admin_btn admin_btn_open" href="/admin/catalogs/{{id}}" title="Manage products">
+            <i class="folder open icon"></i>
+        </a>
         <button id="showEdit{{index}}" type="button" class="admin_btn admin_btn_edit" title="Edit catalog">
             <i class="pencil icon"></i>
         </button>
         <a class="admin_btn admin_btn_delete" href="/admin/catalogs/delete/{{id}}" title="Delete catalog"
-           onclick="return confirm('Delete this catalog and all its products?')">
+        onclick="return confirm('Delete this catalog and all its products?')">
             <i class="trash icon"></i>
         </a>
     </div>

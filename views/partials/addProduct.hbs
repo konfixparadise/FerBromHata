@@ -1,0 +1,11 @@
+<form class="ui form admin_add_form" action="/admin/catalogs/{{catalog.id}}/products/add" method="POST">
+    <div class="field">
+        <label> Title </label>
+        <input type="text" name="title" placeholder="e.g. SmartFeed Pro" required>
+    </div>
+    <div class="field">
+        <label> Description </label>
+        <textarea name="description" rows="3" placeholder="What this product does..." required></textarea>
+    </div>
+    <button type="submit" class="ui fluid btns"> Add product </button>
+</form>

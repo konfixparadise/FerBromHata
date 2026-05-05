@@ -36,6 +36,18 @@ const catalogStore = {
 
     async editCatalog(id, updated) {
         await this.store.editCollection(this.collection, id, updated)
+    },
+
+    async addProduct(catalogId, product) {
+        await this.store.addItem(this.collection, catalogId, this.productArray, product)
+    },
+
+    async removeProduct(catalogId, productId) {
+        await this.store.removeItem(this.collection, catalogId, this.productArray, productId)
+    },
+
+    async editProduct(catalogId, productId, updated) {
+        await this.store.editItem(this.collection, catalogId, productId, this.productArray, updated)
     }
 }
 

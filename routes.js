@@ -26,6 +26,10 @@ router.get('/admin/catalogs', accounts.requireAdmin, adminCatalogs.createView)
 router.post('/admin/catalogs/add', accounts.requireAdmin, adminCatalogs.addCatalog)
 router.get('/admin/catalogs/delete/:id', accounts.requireAdmin, adminCatalogs.deleteCatalog)
 router.post('/admin/catalogs/update/:id', accounts.requireAdmin, adminCatalogs.updateCatalog)
+router.get('/admin/catalogs/:id', accounts.requireAdmin, adminCatalogs.detailView)
+router.post('/admin/catalogs/:id/products/add', accounts.requireAdmin, adminCatalogs.addProduct)
+router.get('/admin/catalogs/:id/products/delete/:productId', accounts.requireAdmin, adminCatalogs.deleteProduct)
+router.post('/admin/catalogs/:id/products/update/:productId', accounts.requireAdmin, adminCatalogs.updateProduct)
 
 router.get('/error', (request, response) => response.status(404).end('Page not found!'))
 

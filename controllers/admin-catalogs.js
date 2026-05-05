@@ -74,6 +74,70 @@ const adminCatalogs = {
 
         await catalogStore.editCatalog(catalogId, updated)
         response.redirect('/admin/catalogs')
+    },
+
+    detailView(request, response) {
+        logger.info('Admin catalog detail loading!')
+        const loggedInUser = accounts.getCurrentUser(request)
+
+        const catalogId = request.params.id
+        const catalog = catalogStore.getCatalogById(catalogId)
+
+        const viewData = {
+            title: 'Manage: ' + catalog.title,
+            loggedInUser: loggedInUser,
+            isAdmin: loggedInUser && loggedInUser.isAdmin,
+            fullname: loggedInUser ? loggedInUser.firstName + ' ' + loggedInUser.lastName : '',
+            adminSection: 'Catalogs',
+            catalog: catalog
+        }
+
+        response.render('admin-catalog-detail', viewData)
+    },
+
+    async addProduct(request, response) {
+        const catalogId = request.params.id
+        logger.info(`Adding product to catalog ${catalogId}`)
+
+        const newProduct = {
+            id: uuidv4(),
+            title: request.body.title,
+            picture: {
+                url: '/productPictures/default-product.png',
+                public_id: null
+            },
+            description: request.body.description
+        }
+
+        await catalogStore.addProduct(catalogId, newProduct)
+        response.redirect('/admin/catalogs/' + catalogId)
+    },
+
+    async deleteProduct(request, response) {
+        const catalogId = request.params.id
+        const productId = request.params.productId
+        logger.info(`Deleting product ${productId} from catalog ${catalogId}`)
+        await catalogStore.removeProduct(catalogId, productId)
+        response.redirect('/admin/catalogs/' + catalogId)
+    },
+
+    async updateProduct(request, response) {
+        const catalogId = request.params.id
+        const productId = request.params.productId
+        logger.info(`Updating product ${productId} in catalog ${catalogId}`)
+
+        const catalog = catalogStore.getCatalogById(catalogId)
+        const existing = catalog.products.find(p => p.id === productId)
+
+        const updated = {
+            id: existing.id,
+            title: request.body.title,
+            picture: existing.picture,
+            description: request.body.description
+        }
+
+        await catalogStore.editProduct(catalogId, productId, updated)
+        response.redirect('/admin/catalogs/' + catalogId)
     }
 }
 
