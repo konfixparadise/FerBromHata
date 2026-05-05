@@ -7,23 +7,28 @@ import userStore from '../models/user-store.js'
 
 const accounts = {
     async register(request, response) {
+        const password = request.body.password || ''
+        const passwordRule = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/
+
+        if (!passwordRule.test(password)) {
+            logger.info('Registration blocked, weak password')
+            return response.redirect('/login?error=password')
+        }
+
         const newUser = {
             id: uuidv4(),
             firstName: request.body.firstName,
             lastName: request.body.lastName,
             email: request.body.email,
-            password: request.body.password,
+            password: password,
             isAdmin: false,
-            picture: {
-                url: '/photos/default_avatar.png',
-                public_id: null
-            }
+            picture: { url: '/photos/default_avatar.png', public_id: null }
         }
 
         const existing = userStore.getUserByEmail(newUser.email)
         if (existing) {
             logger.info(`Registration blocked, email already used: ${newUser.email}`)
-            return response.redirect('/login')
+            return response.redirect('/login?error=email')
         }
 
         const file = request.files ? request.files.profilePic : null
@@ -41,7 +46,7 @@ const accounts = {
             response.redirect('/')
         } else {
             logger.info(`Login failed for: ${request.body.email}`)
-            response.redirect('/login')
+            response.redirect('/login?error=login')
         }
     },
 

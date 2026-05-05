@@ -62,12 +62,10 @@ const adminCatalogs = {
             id: uuidv4(),
             userid: loggedInUser.id,
             title: request.body.title,
-            picture: {
-                url: '/catalogPictures/default-catalog.png',
-                public_id: null
-            },
+            picture: { url: '/catalogPictures/default-catalog.png', public_id: null },
             tags: tagsArray,
             description: request.body.description,
+            date: new Date(),
             products: []
         }
 
@@ -98,6 +96,7 @@ const adminCatalogs = {
             picture: existing.picture,
             tags: tagsArray,
             description: request.body.description,
+            date: existing.date,
             products: existing.products
         }
 

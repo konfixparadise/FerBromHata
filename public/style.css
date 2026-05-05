@@ -960,6 +960,29 @@ body {
     margin: 50px 0 40px 0 !important;
 }
 
+.user_avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 6px;
+    vertical-align: middle;
+    border: 2px solid #00DC75;
+}
+
+.login_error {
+    margin-bottom: 15px !important;
+}
+
+.catalog_date,
+.catalog_count {
+    color: #525655 !important;
+    font-size: 0.9em;
+    margin: 4px 0 !important;
+    text-align: left !important;
+    padding: 0 !important;
+}
+
 @media only screen and (max-width: 800px){
 
   body {

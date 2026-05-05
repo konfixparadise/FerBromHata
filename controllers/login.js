@@ -12,7 +12,10 @@ const login = {
             title: 'Login / Register',
             loggedInUser: loggedInUser,
             isAdmin: loggedInUser && loggedInUser.isAdmin,
-            fullname: loggedInUser ? loggedInUser.firstName + ' ' + loggedInUser.lastName : ''
+            fullname: loggedInUser ? loggedInUser.firstName + ' ' + loggedInUser.lastName : '',
+            errorPassword: request.query.error === 'password',
+            errorEmail: request.query.error === 'email',
+            errorLogin: request.query.error === 'login'
         }
 
         response.render('login', viewData)

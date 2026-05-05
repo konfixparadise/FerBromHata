@@ -3,6 +3,22 @@
 <section class="ui segment login_segment">
     <div class="ui container">
         <div class="login_card">
+            {{#if errorPassword}}
+                <div class="ui negative message login_error">
+                    Password must be at least 8 characters and include uppercase, lowercase, and a number.
+                </div>
+            {{/if}}
+            {{#if errorEmail}}
+                <div class="ui negative message login_error">
+                    That email is already registered. Try logging in instead.
+                </div>
+            {{/if}}
+            {{#if errorLogin}}
+                <div class="ui negative message login_error">
+                    Invalid email or password. Please try again.
+                </div>
+            {{/if}}
+
             <div class="ui two top attached buttons login_tabs">
                 <button type="button" class="ui button active_tab" id="loginTab"> Log In </button>
                 <button type="button" class="ui button" id="registerTab"> Register </button>

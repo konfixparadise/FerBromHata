@@ -84,9 +84,17 @@
                                     <div class="five wide column">
                                         <a href="/details/{{id}}">
                                             <h3 class="ui header">
-                                                {{title}}
+                                                {{uppercase title}}
                                             </h3>
                                         </a>
+                                        {{#if date}}
+                                            <p class="catalog_date">
+                                                <i class="calendar alternate outline icon"></i> Created on <i>{{formatDate date}}</i>
+                                            </p>
+                                        {{/if}}
+                                        <p class="catalog_count">
+                                            <i class="cubes icon"></i> {{productCount products}}
+                                        </p>
                                     </div>
                                     <div class="seven wide column tag_container"> 
                                         {{#each tags}}

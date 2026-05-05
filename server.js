@@ -28,7 +28,26 @@ app.use(fileUpload({ useTempFiles: true }))
 const handlebars = create({
     extname: '.hbs',
     helpers: {
-        
+        uppercase: (input) => {
+            if (!input) return ''
+            return input.toUpperCase()
+        },
+        formatDate: (date) => {
+            if (!date) return ''
+            const d = new Date(date)
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: '2-digit'
+            }
+            return d.toLocaleDateString('en-IE', options)
+        },
+        productCount: (products) => {
+            if (!products || products.length === 0) return 'Empty catalog'
+            if (products.length === 1) return '1 product'
+            return products.length + ' products'
+        }
     }
 })
 app.engine('.hbs', handlebars.engine)

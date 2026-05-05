@@ -27,7 +27,12 @@
         {{/if}}
         {{#if loggedInUser}}
             <span class="item user_name">
-                <i class="user circle icon"></i> {{fullname}}
+                {{#if loggedInUser.picture.url}}
+                    <img class="user_avatar" src="{{loggedInUser.picture.url}}" alt="{{fullname}}">
+                {{else}}
+                    <i class="user circle icon"></i>
+                {{/if}}
+                {{fullname}}
             </span>
             <a id="logout" class="login_btn" href="/logout"> Logout </a>
         {{else}}

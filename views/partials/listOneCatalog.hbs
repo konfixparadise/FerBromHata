@@ -12,7 +12,10 @@
             </div>
             <p class="admin_catalog_desc"> {{description}} </p>
             <p class="admin_catalog_meta">
-                <i class="cubes icon"></i> {{products.length}} products
+                <i class="cubes icon"></i> {{productCount products}}
+                {{#if date}}
+                    &nbsp;|&nbsp; <i class="calendar alternate outline icon"></i> {{formatDate date}}
+                {{/if}}
                 {{#if userid}}
                     &nbsp;|&nbsp; <i class="user icon"></i> Admin-added
                 {{else}}
